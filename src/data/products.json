@@ -1,0 +1,158 @@
+[
+  {
+    "id": "1",
+    "article": "CS-3000-1",
+    "title": "Gorney Straight",
+    "category": "Facelift Scissors",
+    "price": 20,
+    "images": [
+      { "src": "https://cdn.coinsurgical.shop/Gorney%20Straight.jpg", "alt": "Gorney Straight facelift scissors" }
+        ],
+    "description": "Precision-crafted facelift scissors designed for controlled dissection and smooth handling. Balanced for delicate surgical procedures with enhanced cutting accuracy.",
+    "variants": [
+      {
+        "name": "Gorney Straight",
+        "price": 20,
+        "sizes": [
+          { "name": "17.5CM", "code": "CS-3000-1" },
+          { "name": "19.5CM", "code": "CS-3000-2" },
+          { "name": "23CM", "code": "CS-3000-3" }
+        ]
+      },
+      {
+        "name": "Gorney Curved",
+        "price": 20,
+        "sizes": [
+          { "name": "17.5CM", "code": "CS-3001-1" },
+          { "name": "19.5CM", "code": "CS-3001-2" },
+          { "name": "23CM", "code": "CS-3001-3" }
+        ]
+      }
+    ],
+    "specs": [
+      { "label": "Material", "value": "German Stainless Steel (316L)" },
+      { "label": "Sterilization", "value": "Autoclavable" }
+    ]
+  },
+  {
+  "id": "2",
+  "article": "CS-3002-1",
+  "title": "Gorney Freeman Scissors",
+  "category": "Facelift Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Gorney%20Freeman%20Straight.jpg",
+      "alt": "Gorney Freeman facelift scissors"
+    }
+  ],
+  "description": "Precision-crafted facelift scissors designed for controlled dissection and smooth handling. Balanced for delicate surgical procedures with enhanced cutting accuracy.",
+  "variants": [
+    {
+      "name": "Gorney Freeman Straight",
+      "price": 20,
+      "sizes": [
+        { "name": "17.5CM", "code": "CS-3002-1" },
+        { "name": "19.5CM", "code": "CS-3002-2" },
+        { "name": "23CM", "code": "CS-3002-3" }
+      ]
+    },
+    {
+      "name": "Gorney Freeman Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "17.5CM", "code": "CS-3003-1" },
+        { "name": "19.5CM", "code": "CS-3003-2" },
+        { "name": "23CM", "code": "CS-3003-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "3",
+  "article": "CS-3004-1",
+  "title": "Kaye Curved Scissors",
+  "category": "Facelift Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Kaye%20Curved.jpg",
+      "alt": "Kaye curved facelift scissors"
+    }
+  ],
+  "description": "Curved facelift scissors designed for precision cutting in confined surgical areas. Provides smooth maneuverability and enhanced visibility during procedures.",
+  "variants": [
+    {
+      "name": "Kaye Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "17.5CM", "code": "CS-3004-1" },
+        { "name": "19.5CM", "code": "CS-3004-2" },
+        { "name": "23CM", "code": "CS-3004-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "4",
+  "article": "CS-3005",
+  "title": "Aufricht Curved Scissors",
+  "category": "Facelift Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Aufricht%20Curved.jpg",
+      "alt": "Aufricht curved scissors"
+    }
+  ],
+  "description": "Specialized curved scissors designed for fine dissection in facial procedures. Offers optimal control with a lightweight and ergonomic design.",
+  "variants": [
+    {
+      "name": "Aufricht Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3005" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "5",
+  "article": "CS-3006",
+  "title": "Goldman Fox Curved Scissors",
+  "category": "Facelift Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Goldman%20Fox%20Curved.jpg",
+      "alt": "Goldman Fox curved scissors"
+    }
+  ],
+  "description": "Compact curved scissors ideal for precise cutting in delicate surgical procedures. Known for sharpness, durability, and fine control.",
+  "variants": [
+    {
+      "name": "Goldman Fox Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3006" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
+]
