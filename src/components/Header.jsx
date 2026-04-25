@@ -3,7 +3,11 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
 
-const getImageSrc = (image) => typeof image === 'string' ? image : image?.src;
+const fallbackImage = '/scalpel.png';
+const getImageSrc = (image) => {
+  const src = typeof image === 'string' ? image : image?.src;
+  return src || fallbackImage;
+};
 const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
 
 const Header = () => {
@@ -110,7 +114,7 @@ const Header = () => {
                 {searchQuery && searchResults.length === 0 && <div className="desktop-search-empty">No products found.</div>}
                 {searchResults.map((product) => (
                   <Link key={product.id} to={`/product/${product.id}`} className="desktop-search-result" onClick={closeSearchResults}>
-                    <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} />
+                    <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     <span>
                       <strong>{product.title}</strong>
                       <small>Article {product.article}</small>
@@ -149,7 +153,7 @@ const Header = () => {
             {searchQuery && searchResults.length === 0 && <div className="mobile-search-empty">No products found.</div>}
             {searchResults.map((product) => (
               <Link key={product.id} to={`/product/${product.id}`} className="mobile-search-result" onClick={closeSearchResults}>
-                <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} />
+                <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 <span>
                   <strong>{product.title}</strong>
                   <small>Article {product.article}</small>

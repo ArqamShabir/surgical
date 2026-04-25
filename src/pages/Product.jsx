@@ -5,7 +5,11 @@ import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
-const getImageSrc = (image) => typeof image === 'string' ? image : image?.src;
+const fallbackImage = '/scalpel.png';
+const getImageSrc = (image) => {
+  const src = typeof image === 'string' ? image : image?.src;
+  return src || fallbackImage;
+};
 const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
 
 const getProductPriceRange = (product) => {
@@ -114,7 +118,7 @@ const Product = () => {
                   <path d="M7.5 10.5H13.5"></path>
                 </svg>
               </button>
-              <img className="main-product-image" src={getImageSrc(mainImage)} alt={getImageAlt(mainImage, selectedTitle)} />
+              <img className="main-product-image" src={getImageSrc(mainImage)} alt={getImageAlt(mainImage, selectedTitle)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
               <button
                 type="button"
                 className="image-click-target"
@@ -129,7 +133,7 @@ const Product = () => {
                   className={`thumbnail ${getImageSrc(mainImage) === getImageSrc(img) ? 'active' : ''}`}
                   onClick={() => setMainImage(img)}
                 >
-                  <img src={getImageSrc(img)} alt={getImageAlt(img, `${selectedTitle} view ${i + 1}`)} />
+                  <img src={getImageSrc(img)} alt={getImageAlt(img, `${selectedTitle} view ${i + 1}`)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 </div>
               ))}
             </div>
@@ -218,7 +222,7 @@ const Product = () => {
           {products.filter((item) => item.id !== product.id).slice(0, 2).map((item) => (
             <div className="product-card" key={item.id}>
               <Link to={`/product/${item.id}`} className="product-image">
-                <img src={getImageSrc(item.images?.[0])} alt={getImageAlt(item.images?.[0], item.title)} />
+                <img src={getImageSrc(item.images?.[0])} alt={getImageAlt(item.images?.[0], item.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
               </Link>
               <div className="product-info">
                 <div className="product-code">Article {item.article}</div>

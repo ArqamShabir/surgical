@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import products from '../data/products.json';
 
-const getImageSrc = (image) => typeof image === 'string' ? image : image?.src;
+const fallbackImage = '/scalpel.png';
+const getImageSrc = (image) => {
+  const src = typeof image === 'string' ? image : image?.src;
+  return src || fallbackImage;
+};
 const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
 
 const Home = () => {
@@ -50,7 +54,7 @@ const Home = () => {
             {featuredProducts.map((product) => (
               <div className="product-card" key={product.id}>
                 <Link to={`/product/${product.id}`} className="product-image">
-                  <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} />
+                  <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 </Link>
                 <div className="product-info">
                   <div className="product-code">Article {product.article}</div>
