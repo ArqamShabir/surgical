@@ -6,7 +6,7 @@
     "category": "Facelift Scissors",
     "price": 20,
     "images": [
-      { "src": "https://cdn.coinsurgical.shop/cdn/Gorney%20Straight.jpg", "alt": "Gorney Straight facelift scissors" }
+      { "src": "https://cdn.coinsurgical.shop/Gorney%20Straight.jpg", "alt": "Gorney Straight facelift scissors" }
         ],
     "description": "Precision-crafted facelift scissors designed for controlled dissection and smooth handling. Balanced for delicate surgical procedures with enhanced cutting accuracy.",
     "variants": [
@@ -42,7 +42,7 @@
   "price": 20,
   "images": [
     {
-      "src": "https://cdn.coinsurgical.shop/cdn/Gorney%20Freeman%20Straight.jpg",
+      "src": "https://cdn.coinsurgical.shop/Gorney%20Freeman%20Straight.jpg",
       "alt": "Gorney Freeman facelift scissors"
     }
   ],
@@ -80,7 +80,7 @@
   "price": 20,
   "images": [
     {
-      "src": "https://cdn.coinsurgical.shop/cdn/Kaye%20Curved.jpg",
+      "src": "https://cdn.coinsurgical.shop/Kaye%20Curved.jpg",
       "alt": "Kaye curved facelift scissors"
     }
   ],
@@ -109,7 +109,7 @@
   "price": 20,
   "images": [
     {
-      "src": "https://cdn.coinsurgical.shop/cdn/Aufricht%20Curved.jpg",
+      "src": "https://cdn.coinsurgical.shop/Aufricht%20Curved.jpg",
       "alt": "Aufricht curved scissors"
     }
   ],
@@ -136,7 +136,7 @@
   "price": 20,
   "images": [
     {
-      "src": "https://cdn.coinsurgical.shop/cdn/Goldman%20Fox%20Curved.jpg",
+      "src": "https://cdn.coinsurgical.shop/Goldman%20Fox%20Curved.jpg",
       "alt": "Goldman Fox curved scissors"
     }
   ],
