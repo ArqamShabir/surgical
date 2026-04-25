@@ -723,6 +723,7 @@ img {
   background-position: var(--zoom-x) var(--zoom-y);
   background-size: 220%;
   cursor: zoom-out;
+  touch-action: none;
 }
 
 .product-zoom-target.zoom-active .main-product-image {
@@ -1344,6 +1345,10 @@ img {
 
 /* Responsive Overrides (Must be at bottom) */
 @media (max-width: 768px) {
+  .main-image-container {
+    padding: 0;
+  }
+
   .catalog-summary {
     flex-direction: column;
   }

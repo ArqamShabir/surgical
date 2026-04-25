@@ -68,6 +68,22 @@ const Product = () => {
     });
   };
 
+  const handleZoomTouchMove = (event) => {
+    if (!isZoomActive) return;
+
+    const touch = event.touches[0];
+    if (!touch) return;
+
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = ((touch.clientX - bounds.left) / bounds.width) * 100;
+    const y = ((touch.clientY - bounds.top) / bounds.height) * 100;
+
+    setZoomPosition({
+      x: Math.min(100, Math.max(0, x)),
+      y: Math.min(100, Math.max(0, y))
+    });
+  };
+
   useEffect(() => {
     const variantSizes = selectedVariantData?.sizes || product.sizes || [];
 
@@ -99,6 +115,7 @@ const Product = () => {
               className={`main-image-container product-zoom-target ${isZoomActive ? 'zoom-active' : ''}`}
               onMouseMove={handleZoomMove}
               onMouseLeave={() => setIsZoomActive(false)}
+              onTouchMove={handleZoomTouchMove}
               style={{
                 '--zoom-x': `${zoomPosition.x}%`,
                 '--zoom-y': `${zoomPosition.y}%`,
