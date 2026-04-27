@@ -1,12 +1,20 @@
 <?php
 ini_set('display_errors', '0');
+ob_start();
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-  http_response_code(405);
-  echo json_encode(['ok' => false, 'error' => 'Method not allowed']);
+function send_json(array $payload, int $status = 200): void {
+  http_response_code($status);
+  if (ob_get_length()) {
+    ob_clean();
+  }
+  echo json_encode($payload);
   exit;
+}
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+  send_json(['ok' => false, 'error' => 'Method not allowed'], 405);
 }
 
 $MAIL_CONFIG = [];
@@ -60,26 +68,19 @@ $items = isset($data['items']) && is_array($data['items']) ? $data['items'] : []
 $hp = trim((string)($data['hp'] ?? ''));
 
 if ($hp !== '') {
-  echo json_encode(['ok' => true, 'message' => 'Thanks']);
-  exit;
+  send_json(['ok' => true, 'message' => 'Thanks']);
 }
 
 if ($name === '' || $email === '' || ($formType !== 'quote' && $message === '')) {
-  http_response_code(400);
-  echo json_encode(['ok' => false, 'error' => 'Please complete all required fields.']);
-  exit;
+  send_json(['ok' => false, 'error' => 'Please complete all required fields.'], 400);
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  http_response_code(400);
-  echo json_encode(['ok' => false, 'error' => 'Please enter a valid email address.']);
-  exit;
+  send_json(['ok' => false, 'error' => 'Please enter a valid email address.'], 400);
 }
 
 if (strlen($name) > 80 || strlen($email) > 120 || strlen($company) > 120 || strlen($subject) > 140 || strlen($message) > 2000) {
-  http_response_code(400);
-  echo json_encode(['ok' => false, 'error' => 'Message is too long.']);
-  exit;
+  send_json(['ok' => false, 'error' => 'Message is too long.'], 400);
 }
 
 $safeItems = [];
@@ -97,9 +98,7 @@ if ($formType === 'quote') {
   }
 
   if ($company === '' || count($safeItems) === 0) {
-    http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Please add at least one product and complete all required fields.']);
-    exit;
+    send_json(['ok' => false, 'error' => 'Please add at least one product and complete all required fields.'], 400);
   }
 }
 
@@ -233,9 +232,8 @@ if (!$sent) {
 }
 
 if ($sent) {
-  echo json_encode(['ok' => true, 'message' => $formType === 'quote' ? 'Quote request sent' : 'Message sent']);
+  send_json(['ok' => true, 'message' => $formType === 'quote' ? 'Quote request sent' : 'Message sent']);
 } else {
   error_log('[contact.php] Failed: ' . ($error ?: 'unknown error'));
-  http_response_code(500);
-  echo json_encode(['ok' => false, 'error' => 'Message could not be sent. Please email us directly.']);
+  send_json(['ok' => false, 'error' => 'Message could not be sent. Please email us directly.'], 500);
 }

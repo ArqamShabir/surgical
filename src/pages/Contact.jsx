@@ -2,8 +2,20 @@ import React from 'react';
 import PageBanner from '../components/PageBanner';
 import FormModal from '../components/FormModal';
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'arqamking128@gmail.com';
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'coinsurgical@gmail.com';
 const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
+
+const readSubmitResult = async (response) => {
+  const text = await response.text();
+  const jsonStart = text.indexOf('{');
+  const jsonEnd = text.lastIndexOf('}');
+
+  if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
+    return JSON.parse(text.slice(jsonStart, jsonEnd + 1));
+  }
+
+  return { ok: response.ok };
+};
 
 const Contact = () => {
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '' });
@@ -40,7 +52,7 @@ const Contact = () => {
         })
       });
 
-      const result = await response.json().catch(() => ({}));
+      const result = await readSubmitResult(response).catch(() => ({ ok: response.ok }));
 
       if (!response.ok || !result.ok) {
         throw new Error(result.error || 'Message could not be sent.');
