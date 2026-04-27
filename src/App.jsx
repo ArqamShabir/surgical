@@ -4,6 +4,7 @@ import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
+import BrandMarquee from './components/BrandMarquee';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import Product from './pages/Product';
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
       <main style={{ minHeight: '60vh' }}>
         {children}
       </main>
+      <BrandMarquee />
       <Footer />
     </>
   );

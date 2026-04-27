@@ -66,9 +66,9 @@ const Contact = () => {
             <h3>Get in Touch</h3>
             <p>Our dedicated B2B sales team is ready to assist you with catalog requests, custom orders, and global distribution inquiries.</p>
             <ul className="contact-details">
-              <li><strong>Email:</strong> accel8295@gmail.com</li>
+              <li><strong>Email:</strong> coinsurgical@gmail.com</li>
               <li><strong>Phone:</strong> +92 3494846107</li>
-              <li><strong>Headquarters:</strong><br/>123 Medical Parkway, Suite 400<br/>New York, NY 10001, USA</li>
+              <li><strong>Headquarters:</strong><br/>Sialkot, Punjab<br/>Pakistan</li>
             </ul>
           </div>
 

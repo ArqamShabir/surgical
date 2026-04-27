@@ -807,11 +807,90 @@ img {
 }
 
 /* Footer */
+.brand-marquee-section {
+  width: min(100% - 2rem, 1400px);
+  margin: var(--spacing-lg) auto 0;
+  background: var(--color-off-white);
+  border: 1px solid var(--color-gray-light);
+  overflow: hidden;
+  padding-bottom: 2.5rem;
+}
+
+.brand-marquee-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 2rem 1.25rem;
+}
+
+.brand-marquee-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--color-white);
+  padding: 0.45rem;
+  border: 1px solid var(--color-gray-light);
+}
+
+.brand-marquee-text {
+  min-width: 0;
+}
+
+.brand-marquee-text h2 {
+  color: var(--color-charcoal);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: none;
+}
+
+.brand-image-marquee {
+  --marquee-duration: 34s;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  user-select: none;
+  padding: 1rem 0 0;
+}
+
+.brand-image-marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: max-content;
+  animation: brandMarqueeScroll var(--marquee-duration) linear infinite;
+}
+
+.brand-image-marquee:hover .brand-image-marquee__group {
+  animation-play-state: paused;
+}
+
+.brand-image-slide {
+  width: 260px;
+  height: 260px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  padding: 1rem;
+}
+
+@keyframes brandMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
 .site-footer {
   background-color: var(--color-primary-teal);
   color: var(--color-white);
   padding: var(--spacing-lg) 0 var(--spacing-md);
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
 }
 
 .footer-grid {
@@ -1407,6 +1486,41 @@ img {
 
   .section-header h2 {
     font-size: 1.75rem;
+  }
+
+  .brand-marquee-section {
+    width: min(100% - 1rem, 1400px);
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .brand-marquee-header {
+    padding: 1.5rem 1rem 0.75rem;
+  }
+
+  .brand-marquee-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-marquee-text h2 {
+    font-size: 1.05rem;
+  }
+
+  .brand-image-marquee {
+    --marquee-duration: 28s;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .brand-image-marquee__group {
+    gap: 0.75rem;
+  }
+
+  .brand-image-slide {
+    width: 70vw;
+    height: 56vw;
+    max-height: 280px;
   }
 
   .product-header h1 {

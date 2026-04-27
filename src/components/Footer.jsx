@@ -41,7 +41,9 @@ const Footer = () => {
             <ul className="footer-links">
               <li>Phone: +92 3494846107</li>
               <li style={{display:'none'}}>Fax: +1 800 555 0199</li>
-              <li>Email: accel8295@gmail.com</li>
+              <li>Emails:</li>
+              <li>coinsurgical@gmail.com</li>
+              <li>accel8295@gmail.com</li>
             </ul>
           </div>
           <div className="footer-col">
@@ -61,10 +63,8 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Address</h4>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.8 }}>
-              123 Medical Parkway<br/>
-              Suite 400<br/>
-              New York, NY 10001<br/>
-              United States
+              Sialkot, Punjab<br/>
+              Pakistan
             </p>
           </div>
         </div>
