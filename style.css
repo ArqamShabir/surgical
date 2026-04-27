@@ -874,6 +874,22 @@ img {
   font-weight: bold;
 }
 
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-social a:first-child svg,
+.footer-social a:last-child svg {
+  fill: currentColor;
+  stroke: none;
+}
+
 .newsletter-form {
   display: flex;
   margin-top: 1rem;
@@ -1238,6 +1254,14 @@ img {
   margin-bottom: 1rem;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-group label {
   display: block;
   margin-bottom: 0.25rem;
@@ -1258,6 +1282,20 @@ img {
   outline: none;
   border-color: var(--color-primary-teal);
   background: var(--color-white);
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: var(--color-primary-teal);
+}
+
+.form-status.error {
+  color: #b42318;
 }
 
 /* Quote Layout */
