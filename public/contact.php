@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', '0');
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
@@ -8,16 +9,34 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
   exit;
 }
 
-$TO_EMAIL   = getenv('CONTACT_TO_EMAIL') ?: 'accel8295@gmail.com';
-$FROM_EMAIL = getenv('CONTACT_FROM_EMAIL') ?: 'no-reply@coinsurgical.com';
+$MAIL_CONFIG = [];
+$privateConfig = __DIR__ . '/mail-config.php';
+if (file_exists($privateConfig)) {
+  $loadedConfig = require $privateConfig;
+  if (is_array($loadedConfig)) {
+    $MAIL_CONFIG = $loadedConfig;
+  }
+}
+
+function config_value(string $key, string $fallback): string {
+  global $MAIL_CONFIG;
+  $envValue = getenv($key);
+  if ($envValue !== false && $envValue !== '') {
+    return $envValue;
+  }
+  return isset($MAIL_CONFIG[$key]) && $MAIL_CONFIG[$key] !== '' ? (string)$MAIL_CONFIG[$key] : $fallback;
+}
+
+$TO_EMAIL   = config_value('CONTACT_TO_EMAIL', 'arqamking128@gmail.com');
+$FROM_EMAIL = config_value('CONTACT_FROM_EMAIL', 'arqamking128@gmail.com');
 $FROM_NAME  = getenv('CONTACT_FROM_NAME') ?: 'CoinSurgical Website';
 
 $SMTP = [
-  'host'   => getenv('SMTP_HOST') ?: 'smtp.hostinger.com',
-  'user'   => getenv('SMTP_USER') ?: 'no-reply@coinsurgical.com',
-  'pass'   => getenv('SMTP_PASS') ?: '',
-  'port'   => (int)(getenv('SMTP_PORT') ?: 587),
-  'secure' => getenv('SMTP_SECURE') ?: 'tls',
+  'host'   => config_value('SMTP_HOST', 'smtp.gmail.com'),
+  'user'   => config_value('SMTP_USER', 'arqamking128@gmail.com'),
+  'pass'   => config_value('SMTP_PASS', 'srty puav krzj cziq'),
+  'port'   => (int)config_value('SMTP_PORT', '587'),
+  'secure' => config_value('SMTP_SECURE', 'tls'),
 ];
 
 $raw = file_get_contents('php://input');
@@ -36,6 +55,8 @@ $email = trim((string)($data['email'] ?? ''));
 $company = clean_text($data['company'] ?? '');
 $subject = clean_text($data['subject'] ?? 'Website inquiry');
 $message = trim((string)($data['message'] ?? ''));
+$formType = clean_text($data['formType'] ?? 'contact');
+$items = isset($data['items']) && is_array($data['items']) ? $data['items'] : [];
 $hp = trim((string)($data['hp'] ?? ''));
 
 if ($hp !== '') {
@@ -43,7 +64,7 @@ if ($hp !== '') {
   exit;
 }
 
-if ($name === '' || $email === '' || $message === '') {
+if ($name === '' || $email === '' || ($formType !== 'quote' && $message === '')) {
   http_response_code(400);
   echo json_encode(['ok' => false, 'error' => 'Please complete all required fields.']);
   exit;
@@ -61,25 +82,74 @@ if (strlen($name) > 80 || strlen($email) > 120 || strlen($company) > 120 || strl
   exit;
 }
 
+$safeItems = [];
+if ($formType === 'quote') {
+  foreach ($items as $item) {
+    if (!is_array($item)) {
+      continue;
+    }
+    $safeItems[] = [
+      'name' => clean_text($item['name'] ?? ''),
+      'article' => clean_text($item['article'] ?? $item['id'] ?? ''),
+      'variant' => clean_text($item['variant'] ?? 'Standard'),
+      'quantity' => max(1, min(999, (int)($item['quantity'] ?? 1))),
+    ];
+  }
+
+  if ($company === '' || count($safeItems) === 0) {
+    http_response_code(400);
+    echo json_encode(['ok' => false, 'error' => 'Please add at least one product and complete all required fields.']);
+    exit;
+  }
+}
+
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-$bodyLines = [
-  'New message from CoinSurgical contact form:',
-  '',
-  "Name: $name",
-  "Email: $email",
-  $company !== '' ? "Company / Hospital: $company" : null,
-  "Subject: $subject",
-  '',
-  'Message:',
-  $message,
-  '',
-  '---',
-  "IP: $ip",
-  "User Agent: $ua",
-];
+
+if ($formType === 'quote') {
+  $itemLines = array_map(function ($item, $index) {
+    $number = $index + 1;
+    return "{$number}. {$item['name']}\r\n   Article: {$item['article']}\r\n   Variant: {$item['variant']}\r\n   Quantity: {$item['quantity']}";
+  }, $safeItems, array_keys($safeItems));
+
+  $bodyLines = [
+    'New quote request from CoinSurgical inquiry list:',
+    '',
+    "Name: $name",
+    "Email: $email",
+    "Company / Organization: $company",
+    '',
+    'Selected instruments:',
+    implode("\r\n\r\n", $itemLines),
+    '',
+    'Additional requirements:',
+    $message !== '' ? $message : 'None provided',
+    '',
+    '---',
+    "IP: $ip",
+    "User Agent: $ua",
+  ];
+  $finalSubject = 'Quote request from ' . $name;
+} else {
+  $bodyLines = [
+    'New message from CoinSurgical contact form:',
+    '',
+    "Name: $name",
+    "Email: $email",
+    $company !== '' ? "Company / Hospital: $company" : null,
+    "Subject: $subject",
+    '',
+    'Message:',
+    $message,
+    '',
+    '---',
+    "IP: $ip",
+    "User Agent: $ua",
+  ];
+  $finalSubject = 'Contact: ' . $subject;
+}
+
 $body = implode("\r\n", array_filter($bodyLines, fn($line) => $line !== null));
-$finalSubject = 'Contact: ' . $subject;
 
 function try_send_with_phpmailer(array $SMTP, string $FROM_EMAIL, string $FROM_NAME, string $TO_EMAIL, string $replyEmail, string $replyName, string $subject, string $body, ?string &$err): bool {
   $err = null;
@@ -163,7 +233,7 @@ if (!$sent) {
 }
 
 if ($sent) {
-  echo json_encode(['ok' => true, 'message' => 'Message sent']);
+  echo json_encode(['ok' => true, 'message' => $formType === 'quote' ? 'Quote request sent' : 'Message sent']);
 } else {
   error_log('[contact.php] Failed: ' . ($error ?: 'unknown error'));
   http_response_code(500);

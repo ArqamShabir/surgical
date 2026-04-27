@@ -1,11 +1,12 @@
 import React from 'react';
 import PageBanner from '../components/PageBanner';
+import FormModal from '../components/FormModal';
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'accel8295@gmail.com';
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'arqamking128@gmail.com';
 const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
 
 const Contact = () => {
-  const [status, setStatus] = React.useState({ type: '', message: '' });
+  const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '' });
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const handleSubmit = async (e) => {
@@ -23,13 +24,13 @@ const Contact = () => {
     const message = String(formData.get('message') || '').trim();
 
     setIsSubmitting(true);
-    setStatus({ type: '', message: '' });
 
     try {
       const response = await fetch(contactEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          formType: 'contact',
           name,
           email,
           company,
@@ -45,11 +46,18 @@ const Contact = () => {
         throw new Error(result.error || 'Message could not be sent.');
       }
 
-      setStatus({ type: 'success', message: 'Message sent successfully.' });
+      setModal({
+        open: true,
+        type: 'success',
+        title: 'Message Sent',
+        message: 'Thanks. Your message has been sent and we will get back to you shortly.'
+      });
       e.currentTarget.reset();
     } catch (error) {
-      setStatus({
+      setModal({
+        open: true,
         type: 'error',
+        title: 'Message Not Sent',
         message: `Message could not be sent from the form. Please email ${contactEmail} directly.`
       });
     } finally {
@@ -102,11 +110,17 @@ const Contact = () => {
               <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
-              {status.message && <div className={`form-status ${status.type}`}>{status.message}</div>}
             </form>
           </div>
         </div>
       </div>
+      <FormModal
+        open={modal.open}
+        type={modal.type}
+        title={modal.title}
+        message={modal.message}
+        onClose={() => setModal((current) => ({ ...current, open: false }))}
+      />
     </>
   );
 };
