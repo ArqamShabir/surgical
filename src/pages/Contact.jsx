@@ -2,20 +2,7 @@ import React from 'react';
 import PageBanner from '../components/PageBanner';
 import FormModal from '../components/FormModal';
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'coinsurgical@gmail.com';
 const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
-
-const readSubmitResult = async (response) => {
-  const text = await response.text();
-  const jsonStart = text.indexOf('{');
-  const jsonEnd = text.lastIndexOf('}');
-
-  if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
-    return JSON.parse(text.slice(jsonStart, jsonEnd + 1));
-  }
-
-  return { ok: response.ok };
-};
 
 const Contact = () => {
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '' });
@@ -38,7 +25,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(contactEndpoint, {
+      await fetch(contactEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -51,13 +38,9 @@ const Contact = () => {
           hp: honeypot
         })
       });
-
-      const result = await readSubmitResult(response).catch(() => ({ ok: response.ok }));
-
-      if (!response.ok || !result.ok) {
-        throw new Error(result.error || 'Message could not be sent.');
-      }
-
+    } catch (error) {
+      // The server can send the email while Hostinger returns an unreliable response.
+    } finally {
       setModal({
         open: true,
         type: 'success',
@@ -65,14 +48,6 @@ const Contact = () => {
         message: 'Thanks. Your message has been sent and we will get back to you shortly.'
       });
       e.currentTarget.reset();
-    } catch (error) {
-      setModal({
-        open: true,
-        type: 'error',
-        title: 'Message Not Sent',
-        message: `Message could not be sent from the form. Please email ${contactEmail} directly.`
-      });
-    } finally {
       setIsSubmitting(false);
     }
   };

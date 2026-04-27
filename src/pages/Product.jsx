@@ -1,8 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import PageBanner from '../components/PageBanner';
 import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
+import { findProductByParam, getProductPath, getProductSlug } from '../utils/productUrls';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
 const fallbackImage = '/scalpel.png';
@@ -29,7 +30,8 @@ const getProductPriceRange = (product) => {
 const Product = () => {
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
-  const product = products.find((item) => item.id === id) || products[0];
+  const product = findProductByParam(products, id) || products[0];
+  const canonicalPath = getProductPath(product);
   const [mainImage, setMainImage] = useState(product.images?.[0] || null);
   const [selectedVariant, setSelectedVariant] = useState(product.variants?.[0]?.name || '');
   const [selectedSize, setSelectedSize] = useState(product.variants?.[0]?.sizes?.[0]?.name || product.sizes?.[0]?.name || '');
@@ -91,6 +93,10 @@ const Product = () => {
       setSelectedSize(variantSizes[0].name);
     }
   }, [product.sizes, selectedSize, selectedVariantData]);
+
+  if (id !== getProductSlug(product)) {
+    return <Navigate to={canonicalPath} replace />;
+  }
 
   const handleAdd = () => {
     addToCart({
@@ -238,13 +244,13 @@ const Product = () => {
         <div className="product-grid">
           {products.filter((item) => item.id !== product.id).slice(0, 2).map((item) => (
             <div className="product-card" key={item.id}>
-              <Link to={`/product/${item.id}`} className="product-image">
+              <Link to={getProductPath(item)} className="product-image">
                 <img src={getImageSrc(item.images?.[0])} alt={getImageAlt(item.images?.[0], item.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
               </Link>
               <div className="product-info">
                 <div className="product-code">Article {item.article}</div>
                 <h3 className="product-title">{item.title}</h3>
-                <Link to={`/product/${item.id}`} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                <Link to={getProductPath(item)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
               </div>
             </div>
           ))}

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
+import { getProductPath } from '../utils/productUrls';
 
 const fallbackImage = '/scalpel.png';
 const getImageSrc = (image) => {
@@ -113,7 +114,7 @@ const Header = () => {
               <div className="desktop-search-results">
                 {searchQuery && searchResults.length === 0 && <div className="desktop-search-empty">No products found.</div>}
                 {searchResults.map((product) => (
-                  <Link key={product.id} to={`/product/${product.id}`} className="desktop-search-result" onClick={closeSearchResults}>
+                  <Link key={product.id} to={getProductPath(product)} className="desktop-search-result" onClick={closeSearchResults}>
                     <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     <span>
                       <strong>{product.title}</strong>
@@ -152,7 +153,7 @@ const Header = () => {
           <div className="mobile-search-results">
             {searchQuery && searchResults.length === 0 && <div className="mobile-search-empty">No products found.</div>}
             {searchResults.map((product) => (
-              <Link key={product.id} to={`/product/${product.id}`} className="mobile-search-result" onClick={closeSearchResults}>
+              <Link key={product.id} to={getProductPath(product)} className="mobile-search-result" onClick={closeSearchResults}>
                 <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 <span>
                   <strong>{product.title}</strong>

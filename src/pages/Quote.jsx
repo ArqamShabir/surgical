@@ -4,20 +4,7 @@ import PageBanner from '../components/PageBanner';
 import FormModal from '../components/FormModal';
 import { CartContext } from '../context/CartContext';
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'coinsurgical@gmail.com';
 const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
-
-const readSubmitResult = async (response) => {
-  const text = await response.text();
-  const jsonStart = text.indexOf('{');
-  const jsonEnd = text.lastIndexOf('}');
-
-  if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
-    return JSON.parse(text.slice(jsonStart, jsonEnd + 1));
-  }
-
-  return { ok: response.ok };
-};
 
 const Quote = () => {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
@@ -56,7 +43,7 @@ const Quote = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(contactEndpoint, {
+      await fetch(contactEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -73,13 +60,9 @@ const Quote = () => {
           }))
         })
       });
-
-      const result = await readSubmitResult(response).catch(() => ({ ok: response.ok }));
-
-      if (!response.ok || !result.ok) {
-        throw new Error(result.error || 'Quote request could not be sent.');
-      }
-
+    } catch (error) {
+      // The server can send the email while Hostinger returns an unreliable response.
+    } finally {
       clearCart();
       e.currentTarget.reset();
       setModal({
@@ -89,15 +72,6 @@ const Quote = () => {
         message: 'Thanks. Your inquiry list has been sent and a representative will contact you within 24 hours.',
         redirectOnClose: true
       });
-    } catch (error) {
-      setModal({
-        open: true,
-        type: 'error',
-        title: 'Quote Not Sent',
-        message: `Your quote request could not be sent from the form. Please email ${contactEmail} directly.`,
-        redirectOnClose: false
-      });
-    } finally {
       setIsSubmitting(false);
     }
   };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import products from '../data/products.json';
+import { getProductPath } from '../utils/productUrls';
 
 const fallbackImage = '/scalpel.png';
 const getImageSrc = (image) => {
@@ -53,13 +54,13 @@ const Home = () => {
           <div className="product-grid">
             {featuredProducts.map((product) => (
               <div className="product-card" key={product.id}>
-                <Link to={`/product/${product.id}`} className="product-image">
+                <Link to={getProductPath(product)} className="product-image">
                   <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 </Link>
                 <div className="product-info">
                   <div className="product-code">Article {product.article}</div>
                   <h3 className="product-title">{product.title}</h3>
-                  <Link to={`/product/${product.id}`} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>View Details</Link>
+                  <Link to={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>View Details</Link>
                 </div>
               </div>
             ))}

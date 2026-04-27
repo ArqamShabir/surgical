@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import PageBanner from '../components/PageBanner';
 import products from '../data/products.json';
+import { getProductPath } from '../utils/productUrls';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
 const fallbackImage = '/scalpel.png';
@@ -152,14 +153,14 @@ const Catalog = () => {
               <div className="product-grid">
                 {filteredProducts.map((product) => (
                 <div className="product-card" key={product.id}>
-                  <Link to={`/product/${product.id}`} className="product-image">
+                  <Link to={getProductPath(product)} className="product-image">
                     <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   </Link>
                   <div className="product-info">
                     <div className="product-code">Article {product.article}</div>
                     <h3 className="product-title">{product.title}</h3>
                     <div className="product-price">{getProductPriceRange(product)}</div>
-                    <Link to={`/product/${product.id}`} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                    <Link to={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
                   </div>
                 </div>
                 ))}
