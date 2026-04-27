@@ -36,7 +36,9 @@ const BrandMarquee = () => {
                 key={`${group}-${index}-${image.src}`}
                 src={image.src}
                 alt={image.alt}
-                loading="lazy"
+                loading={group === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchPriority={group === 0 && index < 3 ? 'high' : 'auto'}
               />
             ))}
           </div>

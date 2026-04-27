@@ -808,12 +808,15 @@ img {
 
 /* Footer */
 .brand-marquee-section {
-  width: min(100% - 2rem, 1400px);
+  width: min(100% - calc(var(--spacing-md) * 2), 1400px);
   margin: var(--spacing-lg) auto 0;
-  background: var(--color-off-white);
-  border: 1px solid var(--color-gray-light);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
+    #f3f7f8;
+  border: 1px solid rgba(35, 143, 163, 0.14);
   overflow: hidden;
   padding-bottom: 2.5rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .brand-marquee-header {
@@ -852,6 +855,7 @@ img {
   overflow: hidden;
   user-select: none;
   padding: 1rem 0 0;
+  pointer-events: none;
 }
 
 .brand-image-marquee__group {
@@ -862,18 +866,15 @@ img {
   animation: brandMarqueeScroll var(--marquee-duration) linear infinite;
 }
 
-.brand-image-marquee:hover .brand-image-marquee__group {
-  animation-play-state: paused;
-}
-
 .brand-image-slide {
   width: 260px;
   height: 260px;
   flex: 0 0 auto;
   object-fit: contain;
-  background: var(--color-white);
-  border: 1px solid var(--color-gray-light);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(35, 143, 163, 0.12);
   padding: 1rem;
+  box-shadow: 0 10px 26px rgba(36, 54, 58, 0.06);
 }
 
 @keyframes brandMarqueeScroll {
@@ -1489,7 +1490,7 @@ img {
   }
 
   .brand-marquee-section {
-    width: min(100% - 1rem, 1400px);
+    width: calc(100% - 3rem);
     margin-top: 2rem;
     padding-bottom: 1.5rem;
   }
