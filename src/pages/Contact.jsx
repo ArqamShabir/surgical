@@ -6,12 +6,12 @@ const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
 
 const Contact = () => {
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '' });
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const honeypot = formData.get('website');
 
     if (honeypot) return;
@@ -22,34 +22,29 @@ const Contact = () => {
     const subject = String(formData.get('subject') || '').trim();
     const message = String(formData.get('message') || '').trim();
 
-    setIsSubmitting(true);
+    setModal({
+      open: true,
+      type: 'success',
+      title: 'Message Sent',
+      message: 'Thanks. Your message has been sent and we will get back to you shortly.'
+    });
+    form.reset();
 
-    try {
-      await fetch(contactEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          formType: 'contact',
-          name,
-          email,
-          company,
-          subject,
-          message,
-          hp: honeypot
-        })
-      });
-    } catch (error) {
+    void fetch(contactEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        formType: 'contact',
+        name,
+        email,
+        company,
+        subject,
+        message,
+        hp: honeypot
+      })
+    }).catch(() => {
       // The server can send the email while Hostinger returns an unreliable response.
-    } finally {
-      setModal({
-        open: true,
-        type: 'success',
-        title: 'Message Sent',
-        message: 'Thanks. Your message has been sent and we will get back to you shortly.'
-      });
-      e.currentTarget.reset();
-      setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -94,8 +89,8 @@ const Contact = () => {
                 <label>Message</label>
                 <textarea name="message" className="form-control" rows="5" maxLength="2000" required></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+              <button type="submit" className="btn btn-primary">
+                Send Message
               </button>
             </form>
           </div>

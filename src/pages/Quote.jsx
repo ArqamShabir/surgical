@@ -8,7 +8,6 @@ const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
 
 const Quote = () => {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '', redirectOnClose: false });
   const navigate = useNavigate();
 
@@ -20,7 +19,7 @@ const Quote = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (cart.length === 0) {
@@ -34,46 +33,43 @@ const Quote = () => {
       return;
     }
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const name = String(formData.get('name') || '').trim();
     const email = String(formData.get('email') || '').trim();
     const company = String(formData.get('company') || '').trim();
     const message = String(formData.get('message') || '').trim();
+    const items = cart.map((item) => ({
+      name: item.name,
+      article: item.id,
+      variant: item.variant || 'Standard',
+      quantity: item.quantity
+    }));
 
-    setIsSubmitting(true);
+    clearCart();
+    form.reset();
+    setModal({
+      open: true,
+      type: 'success',
+      title: 'Quote Request Sent',
+      message: 'Thanks. Your inquiry list has been sent and a representative will contact you within 24 hours.',
+      redirectOnClose: true
+    });
 
-    try {
-      await fetch(contactEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          formType: 'quote',
-          name,
-          email,
-          company,
-          message,
-          items: cart.map((item) => ({
-            name: item.name,
-            article: item.id,
-            variant: item.variant || 'Standard',
-            quantity: item.quantity
-          }))
-        })
-      });
-    } catch (error) {
+    void fetch(contactEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        formType: 'quote',
+        name,
+        email,
+        company,
+        message,
+        items
+      })
+    }).catch(() => {
       // The server can send the email while Hostinger returns an unreliable response.
-    } finally {
-      clearCart();
-      e.currentTarget.reset();
-      setModal({
-        open: true,
-        type: 'success',
-        title: 'Quote Request Sent',
-        message: 'Thanks. Your inquiry list has been sent and a representative will contact you within 24 hours.',
-        redirectOnClose: true
-      });
-      setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -131,8 +127,8 @@ const Quote = () => {
                 <label>Additional Requirements</label>
                 <textarea name="message" className="form-control" rows="4" maxLength="2000"></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }} disabled={isSubmitting || cart.length === 0}>
-                {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }} disabled={cart.length === 0}>
+                Submit Quote Request
               </button>
             </form>
           </div>
