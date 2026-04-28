@@ -154,5 +154,142 @@
     { "label": "Material", "value": "German Stainless Steel (316L)" },
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
+ },
+{
+  "id": "6",
+  "article": "CS-3007-1",
+  "title": "Ragnell Cilner Curved",
+  "category": "Dissecting Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Ragnell%20Cilner%20Curved.png",
+      "alt": "Ragnell Cilner curved dissecting scissors"
+    }
+  ],
+  "description": "Curved dissecting scissors designed for controlled tissue dissection and precise cutting. Balanced for smooth handling in delicate surgical procedures.",
+  "variants": [
+    {
+      "name": "Ragnell Cilner Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "13.5CM", "code": "CS-3007-1" },
+        { "name": "15CM", "code": "CS-3007-2" },
+        { "name": "18CM", "code": "CS-3007-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "7",
+  "article": "CS-3008",
+  "title": "Greenberg PAR Curved",
+  "category": "Dissecting Scissors",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Greenberg%20PAR%20Curved.png",
+      "alt": "Greenberg PAR curved dissecting scissors"
+    }
+  ],
+  "description": "Curved dissecting scissors made for accurate cutting and clean tissue separation. Suitable for fine surgical work requiring control and visibility.",
+  "variants": [
+    {
+      "name": "Greenberg PAR Curved",
+      "price": 20,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3008" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "8",
+  "article": "CS-3009",
+  "title": "Littler Plastic Surgery Curved",
+  "category": "Dissecting Scissors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Littler%20Plastic%20Surgery%20Curved.png",
+      "alt": "Littler plastic surgery curved dissecting scissors"
+    }
+  ],
+  "description": "Compact curved plastic surgery scissors designed for delicate dissection and refined cutting. Offers reliable control for precision surgical use.",
+  "variants": [
+    {
+      "name": "Littler Plastic Surgery Curved",
+      "price": 10,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3009" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "9",
+  "article": "CS-3010",
+  "title": "Kahn Facelift Curved",
+  "category": "Dissecting Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Kahn%20Facelift%20Curved.png",
+      "alt": "Kahn facelift curved dissecting scissors"
+    }
+  ],
+  "description": "Curved facelift scissors designed for precise dissection and controlled cutting in facial surgical procedures. Built for sharp performance and steady handling.",
+  "variants": [
+    {
+      "name": "Kahn Facelift Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "14.5CM", "code": "CS-3010" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "10",
+  "article": "CS-3011",
+  "title": "Fomon Saber Facelift Curved",
+  "category": "Dissecting Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Fomon%20Saber%20Facelift%20Curved.png",
+      "alt": "Fomon Saber facelift curved dissecting scissors"
+    }
+  ],
+  "description": "Saber-style curved facelift scissors designed for fine dissection and controlled cutting. Suitable for delicate procedures where precision and balance matter.",
+  "variants": [
+    {
+      "name": "Fomon Saber Facelift Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "13.5CM", "code": "CS-3011" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
 }
 ]
