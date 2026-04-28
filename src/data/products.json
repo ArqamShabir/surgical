@@ -292,4 +292,140 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
+,
+{
+  "id": "11",
+  "article": "CS-3012",
+  "title": "Iris Scissor Straight",
+  "category": "Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Iris%20Scissor%20Straight.jpg",
+      "alt": "Iris straight scissors"
+    }
+  ],
+  "description": "Straight iris scissors designed for precise cutting in delicate surgical procedures. Ideal for fine tissue work with sharp, accurate performance.",
+  "variants": [
+    {
+      "name": "Iris Scissor Straight",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3012" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "12",
+  "article": "CS-3013",
+  "title": "Iris Scissor Curved",
+  "category": "Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Iris%20Scissor%20Curved.jpg",
+      "alt": "Iris curved scissors"
+    }
+  ],
+  "description": "Curved iris scissors crafted for precision cutting in confined areas. Provides enhanced control and visibility during delicate procedures.",
+  "variants": [
+    {
+      "name": "Iris Scissor Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3013" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "13",
+  "article": "CS-3014",
+  "title": "Strabismus Straight",
+  "category": "Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Strabismus%20Straight.jpg",
+      "alt": "Strabismus straight scissors"
+    }
+  ],
+  "description": "Straight strabismus scissors designed for ophthalmic procedures requiring precision and control. Ensures clean and accurate cutting.",
+  "variants": [
+    {
+      "name": "Strabismus Straight",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3014" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "14",
+  "article": "CS-3015",
+  "title": "Strabismus Curved",
+  "category": "Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Strabismus%20Curved.jpg",
+      "alt": "Strabismus curved scissors"
+    }
+  ],
+  "description": "Curved strabismus scissors optimized for fine ophthalmic dissection. Offers better maneuverability in tight surgical spaces.",
+  "variants": [
+    {
+      "name": "Strabismus Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3015" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "15",
+  "article": "CS-3016",
+  "title": "Waldram Curved",
+  "category": "Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Waldram%20Curved.jpg",
+      "alt": "Waldram curved scissors"
+    }
+  ],
+  "description": "Curved Waldram scissors designed for precise dissection and controlled cutting. Known for reliability and smooth handling in delicate procedures.",
+  "variants": [
+    {
+      "name": "Waldram Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "12.5CM", "code": "CS-3016" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 ]
