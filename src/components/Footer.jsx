@@ -49,13 +49,13 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Follow Us</h4>
             <div className="footer-social">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/coinsurgical" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FacebookIcon />
               </a>
               <a href="https://www.instagram.com/coinsurgical.shop/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <InstagramIcon />
               </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/coinsurgical" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <LinkedinIcon />
               </a>
             </div>
