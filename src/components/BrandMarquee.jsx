@@ -10,8 +10,10 @@ const marqueeImages = [
   { src: 'https://cdn.coinsurgical.shop/7.jpeg', alt: 'CoinSurgical stainless steel instrument' },
   { src: 'https://cdn.coinsurgical.shop/8.jpeg', alt: 'CoinSurgical stainless steel instrument' },
   { src: 'https://cdn.coinsurgical.shop/9.jpeg', alt: 'CoinSurgical stainless steel instrument' },
-  { src: 'https://cdn.coinsurgical.shop/10.jpeg', alt: 'CoinSurgical stainless steel instrument' }
-
+  { src: 'https://cdn.coinsurgical.shop/10.jpeg', alt: 'CoinSurgical stainless steel instrument' },
+  { src: 'https://cdn.coinsurgical.shop/a1.jpeg', alt: 'CoinSurgical stainless steel instrument' },
+  { src: 'https://cdn.coinsurgical.shop/a2.jpeg', alt: 'CoinSurgical stainless steel instrument' },
+{ src: 'https://cdn.coinsurgical.shop/a3.jpeg', alt: 'CoinSurgical stainless steel instrument' }
 
 ];
 

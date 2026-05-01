@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
 import BrandMarquee from './components/BrandMarquee';
+import Seo from './components/Seo';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import Product from './pages/Product';
@@ -38,6 +39,7 @@ function App() {
   return (
     <CartProvider>
       <Router>
+        <Seo />
         <ScrollToTop />
         <Layout>
           <Routes>

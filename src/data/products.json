@@ -427,5 +427,280 @@
     { "label": "Material", "value": "German Stainless Steel (316L)" },
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
+},
+{
+  "id": "16",
+  "article": "CS-3017",
+  "title": "Stevens Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Stevens%20Curved.png",
+      "alt": "Stevens curved tenotomy scissors"
+    }
+  ],
+  "description": "Stevens curved tenotomy scissors designed for delicate tissue dissection with high precision and control.",
+  "variants": [
+    {
+      "name": "Stevens Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3017" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "17",
+  "article": "CS-3018",
+  "title": "Stevens-Stile Pattern Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Stevens-Stile%20Pattern%20Curved.png",
+      "alt": "Stevens-Stile Pattern curved tenotomy scissors"
+    }
+  ],
+  "description": "Stevens-Stile pattern curved tenotomy scissors offering enhanced control for fine surgical procedures.",
+  "variants": [
+    {
+      "name": "Stevens-Stile Pattern Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "12.5CM", "code": "CS-3018" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "18",
+  "article": "CS-3019",
+  "title": "Jameson-Werber Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Jameson-Werber%20Curved.png",
+      "alt": "Jameson-Werber curved tenotomy scissors"
+    }
+  ],
+  "description": "Jameson-Werber curved scissors designed for precision dissection in delicate surgical environments.",
+  "variants": [
+    {
+      "name": "Jameson-Werber Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "13.5CM", "code": "CS-3019" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "19",
+  "article": "CS-3020",
+  "title": "Jameson Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Jameson%20Curved.png",
+      "alt": "Jameson curved tenotomy scissors"
+    }
+  ],
+  "description": "Jameson curved tenotomy scissors providing reliable performance and clean cutting.",
+  "variants": [
+    {
+      "name": "Jameson Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3020" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "20",
+  "article": "CS-3021",
+  "title": "Jameson Strong Pattern Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Jameson%20Strong%20Pattern%20Curved.png",
+      "alt": "Jameson strong pattern curved scissors"
+    }
+  ],
+  "description": "Strong pattern Jameson curved scissors for controlled cutting with added strength and durability.",
+  "variants": [
+    {
+      "name": "Jameson Strong Pattern Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3021" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "21",
+  "article": "CS-3022",
+  "title": "Slim Baby Metzenbaum Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Slim%20Baby%20Metzenbaum%20Curved.png",
+      "alt": "Slim Baby Metzenbaum curved scissors"
+    }
+  ],
+  "description": "Slim Baby Metzenbaum scissors designed for delicate tissue handling and precision dissection.",
+  "variants": [
+    {
+      "name": "Slim Baby Metzenbaum Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3022" },
+        { "name": "18CM", "code": "CS-3023" },
+        { "name": "14CM", "code": "CS-3024" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "22",
+  "article": "CS-3025",
+  "title": "McIndoe Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/McIndoe%20Curved.png",
+      "alt": "McIndoe curved scissors"
+    }
+  ],
+  "description": "McIndoe curved scissors designed for precise dissection and smooth cutting performance.",
+  "variants": [
+    {
+      "name": "McIndoe Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "18CM", "code": "CS-3025" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "23",
+  "article": "CS-3026",
+  "title": "Crayford-Reynolds Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Crayford-Reynolds%20Curved.png",
+      "alt": "Crayford-Reynolds curved scissors"
+    }
+  ],
+  "description": "Crayford-Reynolds curved scissors offering precise control and smooth cutting for surgical procedures.",
+  "variants": [
+    {
+      "name": "Crayford-Reynolds Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "18CM", "code": "CS-3026" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "24",
+  "article": "CS-3027",
+  "title": "Mayo Straight",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mayo%20Straight.png",
+      "alt": "Mayo straight scissors"
+    }
+  ],
+  "description": "Mayo straight scissors designed for cutting dense tissues with strong and reliable performance.",
+  "variants": [
+    {
+      "name": "Mayo Straight",
+      "price": 15,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3027" },
+        { "name": "17CM", "code": "CS-3029" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "25",
+  "article": "CS-3028",
+  "title": "Mayo Curved",
+  "category": "Tenotomy Scissors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mayo%20Curved.png",
+      "alt": "Mayo curved scissors"
+    }
+  ],
+  "description": "Mayo curved scissors designed for cutting thick tissues with improved access and control.",
+  "variants": [
+    {
+      "name": "Mayo Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3028" },
+        { "name": "17CM", "code": "CS-3030" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
 }
+
 ]

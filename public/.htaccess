@@ -1,6 +1,31 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  RewriteRule ^product/1$ /product/1-gorney-straight [R=301,L]
+  RewriteRule ^product/2$ /product/2-gorney-freeman-scissors [R=301,L]
+  RewriteRule ^product/3$ /product/3-kaye-curved-scissors [R=301,L]
+  RewriteRule ^product/4$ /product/4-aufricht-curved-scissors [R=301,L]
+  RewriteRule ^product/5$ /product/5-goldman-fox-curved-scissors [R=301,L]
+  RewriteRule ^product/6$ /product/6-ragnell-cilner-curved [R=301,L]
+  RewriteRule ^product/7$ /product/7-greenberg-par-curved [R=301,L]
+  RewriteRule ^product/8$ /product/8-littler-plastic-surgery-curved [R=301,L]
+  RewriteRule ^product/9$ /product/9-kahn-facelift-curved [R=301,L]
+  RewriteRule ^product/10$ /product/10-fomon-saber-facelift-curved [R=301,L]
+  RewriteRule ^product/11$ /product/11-iris-scissor-straight [R=301,L]
+  RewriteRule ^product/12$ /product/12-iris-scissor-curved [R=301,L]
+  RewriteRule ^product/13$ /product/13-strabismus-straight [R=301,L]
+  RewriteRule ^product/14$ /product/14-strabismus-curved [R=301,L]
+  RewriteRule ^product/15$ /product/15-waldram-curved [R=301,L]
+  RewriteRule ^product/16$ /product/16-stevens-curved [R=301,L]
+  RewriteRule ^product/17$ /product/17-stevens-stile-pattern-curved [R=301,L]
+  RewriteRule ^product/18$ /product/18-jameson-werber-curved [R=301,L]
+  RewriteRule ^product/19$ /product/19-jameson-curved [R=301,L]
+  RewriteRule ^product/20$ /product/20-jameson-strong-pattern-curved [R=301,L]
+  RewriteRule ^product/21$ /product/21-slim-baby-metzenbaum-curved [R=301,L]
+  RewriteRule ^product/22$ /product/22-mcindoe-curved [R=301,L]
+  RewriteRule ^product/23$ /product/23-crayford-reynolds-curved [R=301,L]
+  RewriteRule ^product/24$ /product/24-mayo-straight [R=301,L]
+  RewriteRule ^product/25$ /product/25-mayo-curved [R=301,L]
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
