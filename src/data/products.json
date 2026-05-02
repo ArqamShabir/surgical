@@ -702,5 +702,211 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
+,
+{
+  "id": "30",
+  "article": "CS-3031",
+  "title": "Micron Fine",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Micron%20Fine.png",
+      "alt": "Micron Fine needle holder"
+    }
+  ],
+  "description": "Micron Fine needle holder designed for delicate suturing with high precision and control.",
+  "variants": [
+    {
+      "name": "Micron Fine",
+      "price": 12,
+      "sizes": [
+        { "name": "12.5CM", "code": "CS-3031" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "31",
+  "article": "CS-3032-1",
+  "title": "Derf",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Derf.png",
+      "alt": "Derf needle holder"
+    }
+  ],
+  "description": "Derf needle holder designed for precise suturing in delicate procedures with reliable grip.",
+  "variants": [
+    {
+      "name": "Derf",
+      "price": 12,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3032-1" }
+      ]
+    },
+    {
+      "name": "Derf Smooth",
+      "price": 12,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3032-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "32",
+  "article": "CS-3033-1",
+  "title": "Halsey",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Halsey.png",
+      "alt": "Halsey needle holder"
+    }
+  ],
+  "description": "Halsey needle holder built for fine suturing with excellent control and durability.",
+  "variants": [
+    {
+      "name": "Halsey",
+      "price": 12,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3033-1" }
+      ]
+    },
+    {
+      "name": "Halsey Smooth",
+      "price": 12,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3033-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "33",
+  "article": "CS-3034-1",
+  "title": "Crile Wood",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Crile%20Wood.png",
+      "alt": "Crile Wood needle holder"
+    }
+  ],
+  "description": "Crile Wood needle holder designed for secure needle grip and efficient suturing.",
+  "variants": [
+    {
+      "name": "Crile Wood",
+      "price": 12,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3034-1" },
+        { "name": "18CM", "code": "CS-3034-2" },
+        { "name": "20CM", "code": "CS-3034-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "34",
+  "article": "CS-3035",
+  "title": "Niever TC",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Niever%20TC.png",
+      "alt": "Niever TC needle holder"
+    }
+  ],
+  "description": "Niever TC needle holder with tungsten carbide inserts for enhanced durability and grip.",
+  "variants": [
+    {
+      "name": "Niever TC",
+      "price": 12,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3035" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "35",
+  "article": "CS-3036",
+  "title": "Foster Gillis Combined",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Foster%20Gillis%20Combined.png",
+      "alt": "Foster Gillis combined needle holder"
+    }
+  ],
+  "description": "Foster Gillis combined instrument designed for both suturing and cutting functions.",
+  "variants": [
+    {
+      "name": "Foster Gillis Combined",
+      "price": 12,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3036" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "36",
+  "article": "CS-3037",
+  "title": "Gillis Combined",
+  "category": "Needle Holders",
+  "price": 12,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Gillis%20Combined.png",
+      "alt": "Gillis combined needle holder"
+    }
+  ],
+  "description": "Gillis combined needle holder designed for efficient suturing with integrated cutting capability.",
+  "variants": [
+    {
+      "name": "Gillis Combined",
+      "price": 12,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3037" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 
 ]
