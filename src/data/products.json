@@ -1626,4 +1626,286 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
+,
+{
+  "id": "62",
+  "article": "CS-3063",
+  "title": "Alms Retractor 4x4 Teeth",
+  "category": "Self Retaining Retractors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Alms%20Retractor%204x4%20Teeth.png",
+      "alt": "Alms retractor 4x4 teeth"
+    }
+  ],
+  "description": "Alms self-retaining retractor with 4x4 teeth designed for stable and secure tissue retraction.",
+  "variants": [
+    {
+      "name": "Alms Retractor 4x4 Teeth",
+      "price": 15,
+      "sizes": [
+        { "name": "7CM", "code": "CS-3063" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "63",
+  "article": "CS-3064",
+  "title": "Baby Weitlaner S/R 2x3 Blunt",
+  "category": "Self Retaining Retractors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Baby%20Weitlaner%20S-R%202x3%20Blunt.png",
+      "alt": "Baby Weitlaner retractor blunt"
+    }
+  ],
+  "description": "Baby Weitlaner self-retaining retractor with blunt prongs for delicate tissue handling.",
+  "variants": [
+    {
+      "name": "Baby Weitlaner S/R 2x3 Blunt",
+      "price": 15,
+      "sizes": [
+        { "name": "11.5CM", "code": "CS-3064" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "64",
+  "article": "CS-3065-1",
+  "title": "Weitlaner / Wests S/R",
+  "category": "Self Retaining Retractors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Wests%20SR%203x4%20Sharp%20Prongs.png",
+      "alt": "Weitlaner Wests retractor"
+    }
+  ],
+  "description": "Self-retaining retractor available in sharp and blunt prong configurations for surgical versatility.",
+  "variants": [
+    {
+      "name": "Wests S/R 3x4 Sharp Prongs",
+      "price": 15,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3065-1" }
+      ]
+    },
+    {
+      "name": "Weitlaner S/R 3x4 Blunt Prongs",
+      "price": 15,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3065-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "65",
+  "article": "CS-3066",
+  "title": "Mollison S/R Child Curved",
+  "category": "Self Retaining Retractors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mollison%20SR%20Child%20Curved.png",
+      "alt": "Mollison child curved retractor"
+    }
+  ],
+  "description": "Mollison child curved self-retaining retractor designed for pediatric surgical procedures.",
+  "variants": [
+    {
+      "name": "Mollison S/R Child Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3066" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "66",
+  "article": "CS-3067",
+  "title": "Mollison S/R Adult Curved",
+  "category": "Self Retaining Retractors",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mollison%20SR%20Adult%20Curved.png",
+      "alt": "Mollison adult curved retractor"
+    }
+  ],
+  "description": "Mollison adult curved self-retaining retractor for stable surgical exposure.",
+  "variants": [
+    {
+      "name": "Mollison S/R Adult Curved",
+      "price": 15,
+      "sizes": [
+        { "name": "17CM", "code": "CS-3067" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
+,
+{
+  "id": "67",
+  "article": "CS-3068",
+  "title": "Freers Elevator",
+  "category": "Dissectors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Freers%20Elevator.png",
+      "alt": "Freers elevator"
+    }
+  ],
+  "description": "Freers elevator designed for precise tissue elevation and dissection.",
+  "variants": [
+    {
+      "name": "Freers Elevator",
+      "price": 10,
+      "sizes": [
+        { "name": "18.5CM", "code": "CS-3068" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "68",
+  "article": "CS-3069-1",
+  "title": "Watson Cheyne",
+  "category": "Dissectors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Watson%20Cheyne.png",
+      "alt": "Watson Cheyne dissector"
+    }
+  ],
+  "description": "Watson Cheyne dissector designed for controlled tissue separation.",
+  "variants": [
+    {
+      "name": "Watson Cheyne",
+      "price": 10,
+      "sizes": [
+        { "name": "18CM", "code": "CS-3069-1" },
+        { "name": "23CM", "code": "CS-3069-2" },
+        { "name": "25CM", "code": "CS-3069-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "69",
+  "article": "CS-3070-1",
+  "title": "MacDonald Elevator",
+  "category": "Dissectors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/MacDonald%20Elevator.png",
+      "alt": "MacDonald elevator"
+    }
+  ],
+  "description": "MacDonald elevator designed for precise dissection and elevation.",
+  "variants": [
+    {
+      "name": "MacDonald Elevator",
+      "price": 10,
+      "sizes": [
+        { "name": "19CM", "code": "CS-3070-1" },
+        { "name": "23CM", "code": "CS-3070-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "70",
+  "article": "CS-3071",
+  "title": "Howarth",
+  "category": "Dissectors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Howarth.png",
+      "alt": "Howarth dissector"
+    }
+  ],
+  "description": "Howarth dissector for controlled surgical tissue manipulation.",
+  "variants": [
+    {
+      "name": "Howarth",
+      "price": 10,
+      "sizes": [
+        { "name": "21.5CM", "code": "CS-3071" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "71",
+  "article": "CS-3072",
+  "title": "Mitchels Trimmer",
+  "category": "Dissectors",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mitchels%20Trimmer.png",
+      "alt": "Mitchels trimmer"
+    }
+  ],
+  "description": "Mitchels trimmer designed for precise trimming and tissue refinement.",
+  "variants": [
+    {
+      "name": "Mitchels Trimmer",
+      "price": 10,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3072" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 ]
