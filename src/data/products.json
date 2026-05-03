@@ -1259,5 +1259,371 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
-
+,
+{
+  "id": "50",
+  "article": "CS-3051",
+  "title": "Kilner Detachable",
+  "category": "Retractors & Skin Hooks",
+  "price": 6,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Kilner%20Detachable.png",
+      "alt": "Kilner detachable retractor"
+    }
+  ],
+  "description": "Kilner detachable retractor designed for flexibility and precision during surgical procedures.",
+  "variants": [
+    {
+      "name": "Kilner Detachable",
+      "price": 6,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3051" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "51",
+  "article": "CS-3052-1",
+  "title": "Gillies",
+  "category": "Retractors & Skin Hooks",
+  "price": 6,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Gillies%20Small.png",
+      "alt": "Gillies retractor"
+    }
+  ],
+  "description": "Gillies retractor designed for soft tissue retraction with precision and control.",
+  "variants": [
+    {
+      "name": "Gillies Small",
+      "price": 6,
+      "sizes": [
+        { "name": "18CM", "code": "CS-3052-1" }
+      ]
+    },
+    {
+      "name": "Gillies Large",
+      "price": 6,
+      "sizes": [
+        { "name": "18CM", "code": "CS-3052-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "52",
+  "article": "CS-3053-1",
+  "title": "Klienert-Kutz",
+  "category": "Retractors & Skin Hooks",
+  "price": 6,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Klienert-Kutz%20Small.png",
+      "alt": "Klienert-Kutz retractor"
+    }
+  ],
+  "description": "Klienert-Kutz retractor designed for precise skin and tissue retraction.",
+  "variants": [
+    {
+      "name": "Klienert-Kutz Small",
+      "price": 6,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3053-1" }
+      ]
+    },
+    {
+      "name": "Klienert-Kutz Large",
+      "price": 6,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3053-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "53",
+  "article": "CS-3054",
+  "title": "Joseph Double Skin Hook",
+  "category": "Retractors & Skin Hooks",
+  "price": 6,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Joseph%20Double%20Skin%20Hook.png",
+      "alt": "Joseph double skin hook"
+    }
+  ],
+  "description": "Joseph double skin hook designed for delicate skin retraction during minor procedures.",
+  "variants": [
+    {
+      "name": "Joseph Double Skin Hook",
+      "price": 6,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3054" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "54",
+  "article": "CS-3055",
+  "title": "Rollet Blair Mini-Catspaw",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Rollet%20Blair%20Mini-Catspaw.png",
+      "alt": "Rollet Blair mini catspaw retractor"
+    }
+  ],
+  "description": "Mini catspaw retractor designed for fine retraction in delicate procedures.",
+  "variants": [
+    {
+      "name": "Rollet Blair Mini-Catspaw",
+      "price": 9,
+      "sizes": [
+        { "name": "13.5CM", "code": "CS-3055" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "55",
+  "article": "CS-3056",
+  "title": "Catspaw Retractors",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Catspaw%20Retractors.png",
+      "alt": "Catspaw retractors"
+    }
+  ],
+  "description": "Catspaw retractors designed for effective soft tissue retraction.",
+  "variants": [
+    {
+      "name": "Catspaw Retractors",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3056" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "56",
+  "article": "CS-3057",
+  "title": "Kilner Miniature Pattern Catspaw",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Kilner%20Miniature%20Pattern%20Catspaw.png",
+      "alt": "Kilner miniature catspaw retractor"
+    }
+  ],
+  "description": "Kilner miniature catspaw retractor for precise and controlled tissue retraction.",
+  "variants": [
+    {
+      "name": "Kilner Miniature Pattern Catspaw",
+      "price": 9,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3057" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "57",
+  "article": "CS-3058-1",
+  "title": "Senn-Miller Double Ended",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Senn-Miller%20Double%20Ended%20Sharp.png",
+      "alt": "Senn-Miller double ended retractor"
+    }
+  ],
+  "description": "Senn-Miller double ended retractor for versatile tissue handling.",
+  "variants": [
+    {
+      "name": "Senn-Miller Double Ended Sharp",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3058-1" }
+      ]
+    },
+    {
+      "name": "Senn-Miller Double Ended Blunt",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3058-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "58",
+  "article": "CS-3059",
+  "title": "Ragnell-Davies",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Ragnell-Davies.png",
+      "alt": "Ragnell-Davies retractor"
+    }
+  ],
+  "description": "Ragnell-Davies retractor designed for delicate tissue retraction.",
+  "variants": [
+    {
+      "name": "Ragnell-Davies",
+      "price": 9,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3059" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "59",
+  "article": "CS-3060-1",
+  "title": "Mini-Langenbeck",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Mini-Langenbeck%2010x6mm.png",
+      "alt": "Mini Langenbeck retractor"
+    }
+  ],
+  "description": "Mini-Langenbeck retractor designed for precise retraction in confined areas.",
+  "variants": [
+    {
+      "name": "Mini-Langenbeck 10x6mm",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3060-1" }
+      ]
+    },
+    {
+      "name": "Mini-Langenbeck 17x5mm",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3060-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "60",
+  "article": "CS-3061",
+  "title": "Desmarres Saddle 12mm",
+  "category": "Retractors & Skin Hooks",
+  "price": 9,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Desmarres%20Saddle%2012mm.png",
+      "alt": "Desmarres saddle retractor"
+    }
+  ],
+  "description": "Desmarres saddle retractor designed for ophthalmic and delicate procedures.",
+  "variants": [
+    {
+      "name": "Desmarres Saddle 12mm",
+      "price": 9,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3061" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "61",
+  "article": "CS-3062-1",
+  "title": "Langenbeck",
+  "category": "Retractors & Skin Hooks",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Langenbeck%2022mm%20x%206mm%20Small.png",
+      "alt": "Langenbeck retractor"
+    }
+  ],
+  "description": "Langenbeck retractor designed for deep tissue retraction with multiple size options.",
+  "variants": [
+    {
+      "name": "Langenbeck 22mm x 6mm Small",
+      "price": 10,
+      "sizes": [
+        { "name": "21.5CM", "code": "CS-3062-1" }
+      ]
+    },
+    {
+      "name": "Langenbeck 45mm x 13mm Medium",
+      "price": 10,
+      "sizes": [
+        { "name": "21.5CM", "code": "CS-3062-2" }
+      ]
+    },
+    {
+      "name": "Langenbeck 65mm x 25mm Large",
+      "price": 10,
+      "sizes": [
+        { "name": "21.5CM", "code": "CS-3062-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 ]
