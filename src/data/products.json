@@ -907,6 +907,357 @@
     { "label": "Material", "value": "German Stainless Steel (316L)" },
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
+},
+{
+  "id": "37",
+  "article": "CS-3038",
+  "title": "Gillies Toothed",
+  "category": "Dissecting Forceps",
+  "price": 7,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Gillies%20Toothed.png",
+      "alt": "Gillies toothed dissecting forceps"
+    }
+  ],
+  "description": "Gillies toothed dissecting forceps designed for firm tissue grip and precise handling.",
+  "variants": [
+    {
+      "name": "Gillies Toothed",
+      "price": 7,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3038" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "38",
+  "article": "CS-3039",
+  "title": "McIndoes Non Tooth",
+  "category": "Dissecting Forceps",
+  "price": 7,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/McIndoes%20Non%20Tooth.png",
+      "alt": "McIndoes non toothed forceps"
+    }
+  ],
+  "description": "McIndoes non-toothed forceps for delicate tissue handling without damage.",
+  "variants": [
+    {
+      "name": "McIndoes Non Tooth",
+      "price": 7,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3039" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "39",
+  "article": "CS-3040",
+  "title": "Debakey Diethrich 1.5mm Tip",
+  "category": "Dissecting Forceps",
+  "price": 7,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Debakey%20Diethrich%201.5mm%20Tip.png",
+      "alt": "Debakey Diethrich 1.5mm tip forceps"
+    }
+  ],
+  "description": "Debakey Diethrich forceps with 1.5mm tip for fine vascular and tissue manipulation.",
+  "variants": [
+    {
+      "name": "Debakey Diethrich 1.5mm Tip",
+      "price": 7,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3040" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "40",
+  "article": "CS-3041",
+  "title": "Debakey 2mm Tip",
+  "category": "Dissecting Forceps",
+  "price": 7,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Debakey%202mm%20Tip.png",
+      "alt": "Debakey 2mm tip forceps"
+    }
+  ],
+  "description": "Debakey forceps with 2mm tip for controlled and atraumatic tissue handling.",
+  "variants": [
+    {
+      "name": "Debakey 2mm Tip",
+      "price": 7,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3041" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "41",
+  "article": "CS-3042",
+  "title": "Bipolar 1mm Tip",
+  "category": "Dissecting Forceps",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Bipolar%201mm%20Tip.png",
+      "alt": "Bipolar 1mm tip forceps"
+    }
+  ],
+  "description": "Bipolar forceps with 1mm tip designed for precise coagulation and surgical control.",
+  "variants": [
+    {
+      "name": "Bipolar 1mm Tip",
+      "price": 15,
+      "sizes": [
+        { "name": "12.5CM", "code": "CS-3042" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "42",
+  "article": "CS-3043",
+  "title": "Bipolar 1.5mm Tip",
+  "category": "Dissecting Forceps",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Bipolar%201.5mm%20Tip.png",
+      "alt": "Bipolar 1.5mm tip forceps"
+    }
+  ],
+  "description": "Bipolar forceps with 1.5mm tip for enhanced coagulation and precision.",
+  "variants": [
+    {
+      "name": "Bipolar 1.5mm Tip",
+      "price": 15,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3043" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "43",
+  "article": "CS-3044",
+  "title": "Bipolar Cable",
+  "category": "Dissecting Forceps",
+  "price": 20,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Bipolar%20Cable.png",
+      "alt": "Bipolar cable"
+    }
+  ],
+  "description": "Bipolar cable designed for reliable connection and performance in surgical procedures.",
+  "variants": [
+    {
+      "name": "Bipolar Cable",
+      "price": 20,
+      "sizes": [
+        { "name": "3 Meter", "code": "CS-3044" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "Medical Grade Components" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "44",
+  "article": "CS-3045",
+  "title": "Adson Non Toothed",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Adson%20Non%20Toothed.png",
+      "alt": "Adson non toothed forceps"
+    }
+  ],
+  "description": "Adson non-toothed forceps for delicate tissue manipulation without trauma.",
+  "variants": [
+    {
+      "name": "Adson Non Toothed",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3045" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "45",
+  "article": "CS-3046",
+  "title": "Adson Toothed",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Adson%20Toothed.png",
+      "alt": "Adson toothed forceps"
+    }
+  ],
+  "description": "Adson toothed forceps designed for secure grip on tougher tissues.",
+  "variants": [
+    {
+      "name": "Adson Toothed",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3046" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "46",
+  "article": "CS-3047",
+  "title": "Micro Adson Non Toothed",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Micro%20Adson%20Non%20Toothed.png",
+      "alt": "Micro Adson non toothed forceps"
+    }
+  ],
+  "description": "Micro Adson non-toothed forceps for ultra-fine tissue handling.",
+  "variants": [
+    {
+      "name": "Micro Adson Non Toothed",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3047" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "47",
+  "article": "CS-3048",
+  "title": "Micro Adson Toothed",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Micro%20Adson%20Toothed.png",
+      "alt": "Micro Adson toothed forceps"
+    }
+  ],
+  "description": "Micro Adson toothed forceps designed for precise grip in microsurgical procedures.",
+  "variants": [
+    {
+      "name": "Micro Adson Toothed",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3048" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "48",
+  "article": "CS-3049",
+  "title": "Micro Brown 7x7 Teeth",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Micro%20Brown%207x7%20Teeth.png",
+      "alt": "Micro Brown 7x7 teeth forceps"
+    }
+  ],
+  "description": "Micro Brown forceps with 7x7 teeth pattern for secure grip in fine procedures.",
+  "variants": [
+    {
+      "name": "Micro Brown 7x7 Teeth",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3049" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "49",
+  "article": "CS-3050",
+  "title": "Adson-Debakey 2mm Atraumatic Tips",
+  "category": "Dissecting Forceps",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Adson-Debakey%202mm%20Atraumatic%20Tips.png",
+      "alt": "Adson-Debakey 2mm atraumatic tips forceps"
+    }
+  ],
+  "description": "Adson-Debakey forceps with 2mm atraumatic tips for delicate vascular and tissue handling.",
+  "variants": [
+    {
+      "name": "Adson-Debakey 2mm Atraumatic Tips",
+      "price": 5,
+      "sizes": [
+        { "name": "12CM", "code": "CS-3050" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
 }
 
 ]
