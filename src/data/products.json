@@ -1908,4 +1908,413 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
+,
+{
+  "id": "72",
+  "article": "CS-3073",
+  "title": "Barrons Scalpel Blade Handle",
+  "category": "Scalpel Handles",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Barrons%20Scalpel%20Blade%20Handle.png",
+      "alt": "Barrons Scalpel Blade Handle"
+    }
+  ],
+  "description": "Barrons scalpel blade handle designed for controlled blade handling and precision cutting.",
+  "variants": [
+    {
+      "name": "Barrons Scalpel Blade Handle",
+      "price": 10,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3073" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "73",
+  "article": "CS-3074",
+  "title": "Beaver Blade Holder",
+  "category": "Scalpel Handles",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Beaver%20Blade%20Holder.png",
+      "alt": "Beaver Blade Holder"
+    }
+  ],
+  "description": "Beaver blade holder designed for secure blade placement and precise surgical control.",
+  "variants": [
+    {
+      "name": "Beaver Blade Holder",
+      "price": 10,
+      "sizes": [
+        { "name": "13CM", "code": "CS-3074" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "74",
+  "article": "CS-3075",
+  "title": "Eckoff Mapping Pen",
+  "category": "Scalpel Handles",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Eckoff%20Mapping%20Pen.png",
+      "alt": "Eckoff Mapping Pen"
+    }
+  ],
+  "description": "Eckoff mapping pen designed for accurate surgical marking and measurement guidance.",
+  "variants": [
+    {
+      "name": "Eckoff Mapping Pen",
+      "price": 10,
+      "sizes": [
+        { "name": "14.5CM", "code": "CS-3075" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "75",
+  "article": "CS-3076",
+  "title": "Sommer Lad Marking Pen",
+  "category": "Scalpel Handles",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Sommer%20Lad%20Marking%20Pen.png",
+      "alt": "Sommer Lad Marking Pen"
+    }
+  ],
+  "description": "Sommer Lad marking pen designed for precise surgical skin marking.",
+  "variants": [
+    {
+      "name": "Sommer Lad Marking Pen",
+      "price": 10,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3076" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "76",
+  "article": "CS-3077",
+  "title": "Castroviejo Caliper 0 to 25mm",
+  "category": "Scalpel Handles",
+  "price": 7,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Castroviejo%20Caliper%200%20to%2025mm.png",
+      "alt": "Castroviejo Caliper 0 to 25mm"
+    }
+  ],
+  "description": "Castroviejo caliper designed for accurate surgical measurement from 0 to 25mm.",
+  "variants": [
+    {
+      "name": "Castroviejo Caliper 0 to 25mm",
+      "price": 7,
+      "sizes": [
+        { "name": "7CM", "code": "CS-3077" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "77",
+  "article": "CS-3078",
+  "title": "Ink Pot",
+  "category": "Scalpel Handles",
+  "price": 15,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Ink%20Pot.png",
+      "alt": "Ink Pot"
+    }
+  ],
+  "description": "Ink pot designed for surgical marking and procedural preparation.",
+  "variants": [
+    {
+      "name": "Ink Pot",
+      "price": 15,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3078" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "78",
+  "article": "CS-3079-1",
+  "title": "Measuring Ruler",
+  "category": "Scalpel Handles",
+  "price": 3,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Measuring%20Ruler.png",
+      "alt": "Measuring Ruler"
+    }
+  ],
+  "description": "Measuring ruler designed for accurate surgical measurement.",
+  "variants": [
+    {
+      "name": "Measuring Ruler",
+      "price": 3,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3079-1" },
+        { "name": "30CM", "code": "CS-3079-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "79",
+  "article": "CS-3080-1",
+  "title": "Watson",
+  "category": "Scalpel Handles",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Watson%20Right%20Handed.png",
+      "alt": "Watson Right Handed"
+    }
+  ],
+  "description": "Watson instrument available in right and left handed options for controlled surgical use.",
+  "variants": [
+    {
+      "name": "Watson Right Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3080-1" }
+      ]
+    },
+    {
+      "name": "Watson Left Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3080-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "80",
+  "article": "CS-3081-1",
+  "title": "Braithwaite",
+  "category": "Scalpel Handles",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Braithwaite%20Right%20Handed.png",
+      "alt": "Braithwaite Right Handed"
+    }
+  ],
+  "description": "Braithwaite instrument available in right and left handed options for precise surgical handling.",
+  "variants": [
+    {
+      "name": "Braithwaite Right Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3081-1" }
+      ]
+    },
+    {
+      "name": "Braithwaite Left Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3081-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "81",
+  "article": "CS-3082-1",
+  "title": "Cobbett",
+  "category": "Scalpel Handles",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Cobbett%20Right%20Handed.png",
+      "alt": "Cobbett Right Handed"
+    }
+  ],
+  "description": "Cobbett instrument available in right and left handed options for reliable surgical control.",
+  "variants": [
+    {
+      "name": "Cobbett Right Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3082-1" }
+      ]
+    },
+    {
+      "name": "Cobbett Left Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "30.5CM", "code": "CS-3082-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "82",
+  "article": "CS-3083-1",
+  "title": "Humby",
+  "category": "Scalpel Handles",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Humby%20Right%20Handed.png",
+      "alt": "Humby Right Handed"
+    }
+  ],
+  "description": "Humby instrument available in right and left handed options for controlled surgical cutting.",
+  "variants": [
+    {
+      "name": "Humby Right Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "36.5CM", "code": "CS-3083-1" }
+      ]
+    },
+    {
+      "name": "Humby Left Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "36.5CM", "code": "CS-3083-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "83",
+  "article": "CS-3084-1",
+  "title": "Silver",
+  "category": "Scalpel Handles",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Silver%20Left%20Handed.png",
+      "alt": "Silver Left Handed"
+    }
+  ],
+  "description": "Silver instrument available in right and left handed options for precise surgical cutting.",
+  "variants": [
+    {
+      "name": "Silver Right Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3084-1" }
+      ]
+    },
+    {
+      "name": "Silver Left Handed",
+      "price": 35,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3084-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "84",
+  "article": "CS-3085",
+  "title": "Knife Blades",
+  "category": "Scalpel Handles",
+  "price": 5,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Watson's%20knife%20Blade.png",
+      "alt": "Watson's knife Blade"
+    }
+  ],
+  "description": "Knife blades available in multiple patterns for compatible surgical instruments.",
+  "variants": [
+    {
+      "name": "Cobbett's knife Blade",
+      "price": 5,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3085" }
+      ]
+    },
+    {
+      "name": "Watson's knife Blade",
+      "price": 5,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3086" }
+      ]
+    },
+    {
+      "name": "Braithwaite's knife Blade",
+      "price": 5,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3087" }
+      ]
+    },
+    {
+      "name": "Silver's knife Blade",
+      "price": 5,
+      "sizes": [
+        { "name": "Standard", "code": "CS-3088" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 ]
