@@ -21,7 +21,7 @@ const collections = [
   'Retractors & Skin Hooks',
   'Self Retaining Retractors',
   'Dissectors',
-  'Scalpel Handles & Accessories',
+  'Scalpel Handles',
   'Facelift Forceps',
   'Areola Markers',
   'Breast Retractors',
