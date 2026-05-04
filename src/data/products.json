@@ -2317,4 +2317,348 @@
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
 }
+,
+{
+  "id": "85",
+  "article": "CS-3089",
+  "title": "Assumpcao",
+  "category": "FaceLift Forceps",
+  "price": 35,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Assumpcao%20without%20Rachet.png",
+      "alt": "Assumpcao facelift forceps"
+    }
+  ],
+  "description": "Assumpcao facelift forceps designed for controlled tissue handling in facelift procedures.",
+  "variants": [
+    {
+      "name": "Assumpcao without Rachet",
+      "price": 35,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3089" }
+      ]
+    },
+    {
+      "name": "Assumpcao with Rachet",
+      "price": 35,
+      "sizes": [
+        { "name": "16CM", "code": "CS-3090" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "86",
+  "article": "CS-3091-1",
+  "title": "Pitanguy Forcep",
+  "category": "FaceLift Forceps",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Pitanguy%20Forcep.png",
+      "alt": "Pitanguy facelift forcep"
+    }
+  ],
+  "description": "Pitanguy forcep designed for precise flap handling and controlled tissue grasping.",
+  "variants": [
+    {
+      "name": "Pitanguy Forcep",
+      "price": 10,
+      "sizes": [
+        { "name": "15CM", "code": "CS-3091-1" },
+        { "name": "26CM", "code": "CS-3091-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "87",
+  "article": "CS-3092-1",
+  "title": "Marten Flap",
+  "category": "FaceLift Forceps",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Marten%20Flap%20Without%20Rachet.png",
+      "alt": "Marten flap facelift forceps"
+    }
+  ],
+  "description": "Marten flap forceps designed for controlled flap grasping and tissue handling.",
+  "variants": [
+    {
+      "name": "Marten Flap Without Rachet",
+      "price": 10,
+      "sizes": [
+        { "name": "14.5CM", "code": "CS-3092-1" }
+      ]
+    },
+    {
+      "name": "Marten Flap With Rachet",
+      "price": 10,
+      "sizes": [
+        { "name": "14.5CM", "code": "CS-3092-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "88",
+  "article": "CS-3093-1",
+  "title": "Marten Flap Grasping",
+  "category": "FaceLift Forceps",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Marten%20Flap%20Grasping.png",
+      "alt": "Marten flap grasping facelift forceps"
+    }
+  ],
+  "description": "Marten flap grasping forceps designed for secure flap control during facelift procedures.",
+  "variants": [
+    {
+      "name": "Marten Flap Grasping",
+      "price": 10,
+      "sizes": [
+        { "name": "14CM", "code": "CS-3093-1" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
+,
+{
+  "id": "89",
+  "article": "CS-3094-1",
+  "title": "Freeman Areola Marker",
+  "category": "Areola Markers",
+  "price": 10,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Freeman%20Areola%20Marker.png",
+      "alt": "Freeman Areola Marker"
+    }
+  ],
+  "description": "Freeman areola marker designed for accurate and consistent areola sizing during surgical procedures.",
+  "variants": [
+    {
+      "name": "Freeman Areola Marker",
+      "price": 10,
+      "sizes": [
+        { "name": "36mm", "code": "CS-3094-1" },
+        { "name": "38mm", "code": "CS-3094-2" },
+        { "name": "40mm", "code": "CS-3094-3" },
+        { "name": "42mm", "code": "CS-3094-4" },
+        { "name": "45mm", "code": "CS-3094-5" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "90",
+  "article": "CS-3095-1",
+  "title": "Freeman Double Ended",
+  "category": "Areola Markers",
+  "price": 30,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Freeman%20Double%20Ended.png",
+      "alt": "Freeman Double Ended"
+    }
+  ],
+  "description": "Freeman double ended marker designed for dual-size surgical marking with convenience and precision.",
+  "variants": [
+    {
+      "name": "Freeman Double Ended 38/42mm",
+      "price": 30,
+      "sizes": [
+        { "name": "38/42mm", "code": "CS-3095-1" }
+      ]
+    },
+    {
+      "name": "Freeman Double Ended 42/45mm",
+      "price": 30,
+      "sizes": [
+        { "name": "42/45mm", "code": "CS-3095-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "91",
+  "article": "CS-3096",
+  "title": "Grossman 4 sizes in 1",
+  "category": "Areola Markers",
+  "price": 45,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Grossman%204%20sizes%20in%201.png",
+      "alt": "Grossman 4 sizes in 1"
+    }
+  ],
+  "description": "Grossman areola marker with four integrated sizes for efficient and flexible surgical marking.",
+  "variants": [
+    {
+      "name": "Grossman 4 sizes in 1",
+      "price": 45,
+      "sizes": [
+        { "name": "40mm", "code": "CS-3096" },
+        { "name": "44mm", "code": "CS-3096" },
+        { "name": "48mm", "code": "CS-3096" },
+        { "name": "52mm", "code": "CS-3096" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "92",
+  "article": "CS-3097-1",
+  "title": "Galvao Nipple Marker",
+  "category": "Areola Markers",
+  "price": 45,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Galvao%20Nipple%20Marker.png",
+      "alt": "Galvao Nipple Marker"
+    }
+  ],
+  "description": "Galvao nipple marker designed for precise nipple positioning and marking.",
+  "variants": [
+    {
+      "name": "Galvao Nipple Marker 40mm",
+      "price": 45,
+      "sizes": [
+        { "name": "40mm", "code": "CS-3097-1" }
+      ]
+    },
+    {
+      "name": "Galvao Nipple Marker 50mm",
+      "price": 45,
+      "sizes": [
+        { "name": "50mm", "code": "CS-3097-2" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "93",
+  "article": "CS-3098-1",
+  "title": "McKissock Keyhole Breast Reduction Marker",
+  "category": "Areola Markers",
+  "price": 3,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/McKissock%20Keyhole%20Breast%20Reduction.png",
+      "alt": "McKissock Keyhole Breast Reduction Marker"
+    }
+  ],
+  "description": "McKissock keyhole marker designed for accurate breast reduction marking and symmetry.",
+  "variants": [
+    {
+      "name": "McKissock Keyhole Breast Reduction Marker",
+      "price": 3,
+      "sizes": [
+        { "name": "38mm", "code": "CS-3098-1" },
+        { "name": "42mm", "code": "CS-3098-2" },
+        { "name": "45mm", "code": "CS-3098-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
+,
+{
+  "id": "94",
+  "article": "CS-3099-1",
+  "title": "Tebbetts Fibre Optic Breast Retractor With Teeth",
+  "category": "Breast Retractors",
+  "price": 100,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Tebbetts%20Fibre%20Optic%20Breast%20Retractor%20With%20Teeth.png",
+      "alt": "Tebbetts Fibre Optic Breast Retractor With Teeth"
+    }
+  ],
+  "description": "Tebbetts fibre optic breast retractor with teeth designed for enhanced grip and optimal surgical visibility.",
+  "variants": [
+    {
+      "name": "With Teeth",
+      "price": 100,
+      "sizes": [
+        { "name": "90x24mm", "code": "CS-3099-1" },
+        { "name": "90x30mm", "code": "CS-3099-2" },
+        { "name": "150x36mm", "code": "CS-3099-3" },
+        { "name": "190x36mm", "code": "CS-3099-4" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+},
+{
+  "id": "95",
+  "article": "CS-3100",
+  "title": "Tebbetts Fibre Optic Breast Retractor Blunt",
+  "category": "Breast Retractors",
+  "price": 100,
+  "images": [
+    {
+      "src": "https://cdn.coinsurgical.shop/Tebbetts%20Fibre%20Optic%20Breast%20Retractor%20Blunt.png",
+      "alt": "Tebbetts Fibre Optic Breast Retractor Blunt"
+    }
+  ],
+  "description": "Tebbetts fibre optic breast retractor with blunt edges designed for atraumatic tissue handling and improved illumination.",
+  "variants": [
+    {
+      "name": "Blunt",
+      "price": 100,
+      "sizes": [
+        { "name": "90x24mm", "code": "CS-3100" },
+        { "name": "90x30mm", "code": "CS-3101-1" },
+        { "name": "150x36mm", "code": "CS-3101-2" },
+        { "name": "190x36mm", "code": "CS-3101-3" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
+}
 ]
