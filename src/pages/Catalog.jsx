@@ -22,7 +22,7 @@ const collections = [
   'Self Retaining Retractors',
   'Dissectors',
   'Scalpel Handles',
-  'Facelift Forceps',
+  'FaceLift Forceps',
   'Areola Markers',
   'Breast Retractors',
   'Nasal Instruments',
