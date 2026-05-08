@@ -1,21 +1,24 @@
+'use client';
+
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import PageBanner from '../components/PageBanner';
 import FormModal from '../components/FormModal';
 import { CartContext } from '../context/CartContext';
+import ProductImage from '../components/ProductImage';
 
-const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
+const contactEndpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/contact.php';
 
 const Quote = () => {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '', redirectOnClose: false });
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const closeModal = () => {
     const shouldRedirect = modal.redirectOnClose;
     setModal((current) => ({ ...current, open: false, redirectOnClose: false }));
     if (shouldRedirect) {
-      navigate('/');
+      router.push('/');
     }
   };
 
@@ -88,12 +91,12 @@ const Quote = () => {
               {cart.length === 0 ? (
                 <div className="empty-cart">
                   <p style={{ marginBottom: '1rem' }}>Your inquiry list is empty.</p>
-                  <button onClick={() => navigate('/catalog')} className="btn btn-outline">Browse Catalog</button>
+                  <button onClick={() => router.push('/catalog')} className="btn btn-outline">Browse Catalog</button>
                 </div>
               ) : (
                 cart.map((item, index) => (
                   <div key={index} className="cart-item">
-                    <img src={item.image} alt={item.name} />
+                    <ProductImage image={item.image} alt={item.name} className="cart-item-image" sizes="100px" />
                     <div className="item-details">
                       <div className="item-title">{item.name}</div>
                       <div className="item-sku">Article {item.id} | {item.variant || 'Standard'}</div>

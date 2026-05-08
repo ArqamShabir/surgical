@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
 import PageBanner from '../components/PageBanner';
 import FormModal from '../components/FormModal';
 
-const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
+const contactEndpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/contact.php';
 
 const Contact = () => {
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '' });

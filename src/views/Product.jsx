@@ -1,17 +1,14 @@
+'use client';
+
 import React, { useState, useContext, useEffect } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import Link from 'next/link';
 import PageBanner from '../components/PageBanner';
 import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
-import { findProductByParam, getProductPath, getProductSlug } from '../utils/productUrls';
+import { getProductPath } from '../utils/productUrls';
+import ProductImage, { getImageAlt, getImageSrc } from '../components/ProductImage';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
-const fallbackImage = '/scalpel.png';
-const getImageSrc = (image) => {
-  const src = typeof image === 'string' ? image : image?.src;
-  return src || fallbackImage;
-};
-const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
 
 const getProductPriceRange = (product) => {
   const prices = [
@@ -27,11 +24,8 @@ const getProductPriceRange = (product) => {
   return min === max ? formatPrice(min) : `${formatPrice(min)} - ${formatPrice(max)}`;
 };
 
-const Product = () => {
-  const { id } = useParams();
+const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);
-  const product = findProductByParam(products, id) || products[0];
-  const canonicalPath = getProductPath(product);
   const [mainImage, setMainImage] = useState(product.images?.[0] || null);
   const [selectedVariant, setSelectedVariant] = useState(product.variants?.[0]?.name || '');
   const [selectedSize, setSelectedSize] = useState(product.variants?.[0]?.sizes?.[0]?.name || product.sizes?.[0]?.name || '');
@@ -94,10 +88,6 @@ const Product = () => {
     }
   }, [product.sizes, selectedSize, selectedVariantData]);
 
-  if (id !== getProductSlug(product)) {
-    return <Navigate to={canonicalPath} replace />;
-  }
-
   const handleAdd = () => {
     addToCart({
       id: selectedArticle,
@@ -141,7 +131,13 @@ const Product = () => {
                   <path d="M7.5 10.5H13.5"></path>
                 </svg>
               </button>
-              <img className="main-product-image" src={getImageSrc(mainImage)} alt={getImageAlt(mainImage, selectedTitle)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+              <ProductImage
+                image={mainImage}
+                alt={getImageAlt(mainImage, selectedTitle)}
+                className="main-product-image"
+                sizes="(max-width: 900px) 100vw, 50vw"
+                priority
+              />
               <button
                 type="button"
                 className="image-click-target"
@@ -156,7 +152,7 @@ const Product = () => {
                   className={`thumbnail ${getImageSrc(mainImage) === getImageSrc(img) ? 'active' : ''}`}
                   onClick={() => setMainImage(img)}
                 >
-                  <img src={getImageSrc(img)} alt={getImageAlt(img, `${selectedTitle} view ${i + 1}`)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <ProductImage image={img} alt={getImageAlt(img, `${selectedTitle} view ${i + 1}`)} sizes="120px" />
                 </div>
               ))}
             </div>
@@ -244,13 +240,13 @@ const Product = () => {
         <div className="product-grid">
           {products.filter((item) => item.id !== product.id).slice(0, 2).map((item) => (
             <div className="product-card" key={item.id}>
-              <Link to={getProductPath(item)} className="product-image">
-                <img src={getImageSrc(item.images?.[0])} alt={getImageAlt(item.images?.[0], item.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+              <Link href={getProductPath(item)} className="product-image">
+                <ProductImage image={item.images?.[0]} altFallback={item.title} />
               </Link>
               <div className="product-info">
                 <div className="product-code">Article {item.article}</div>
                 <h3 className="product-title">{item.title}</h3>
-                <Link to={getProductPath(item)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                <Link href={getProductPath(item)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
               </div>
             </div>
           ))}

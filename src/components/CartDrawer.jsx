@@ -1,10 +1,13 @@
+'use client';
+
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { CartContext } from '../context/CartContext';
+import ProductImage from './ProductImage';
 
 const CartDrawer = () => {
   const { cart, removeFromCart, isDrawerOpen, setIsDrawerOpen } = useContext(CartContext);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleClose = () => setIsDrawerOpen(false);
 
@@ -27,7 +30,7 @@ const CartDrawer = () => {
           ) : (
             cart.map((item, index) => (
               <div key={index} style={{ display: 'flex', gap: '1rem', marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid #eee' }}>
-                <img src={item.image} alt={item.name} style={{ width: '60px', height: '60px', objectFit: 'contain', background: '#f8f9fa' }} />
+                <ProductImage image={item.image} alt={item.name} className="drawer-item-image" sizes="60px" />
                 <div style={{ flex: 1 }}>
                   <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{item.name}</div>
                   <div style={{ fontSize: '0.75rem', color: '#888' }}>{item.variant || 'Standard'}</div>
@@ -51,7 +54,7 @@ const CartDrawer = () => {
             style={{ width: '100%' }}
             onClick={() => {
               handleClose();
-              navigate('/quote');
+              router.push('/quote');
             }}
           >
             Send for Inquiry

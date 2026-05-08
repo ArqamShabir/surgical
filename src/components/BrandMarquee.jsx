@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 
 const marqueeImages = [
   { src: 'https://cdn.coinsurgical.shop/1.jpeg', alt: 'CoinSurgical surgical instrument detail' },
@@ -17,13 +17,13 @@ const marqueeImages = [
 
 ];
 
-const repeatedGroups = Array.from({ length: 4 }, (_, index) => index);
+const repeatedGroups = Array.from({ length: 2 }, (_, index) => index);
 
 const BrandMarquee = () => {
   return (
     <section className="brand-marquee-section" aria-label="CoinSurgical featured gallery">
       <div className="brand-marquee-header">
-        <img className="brand-marquee-logo" src="/logo.png" alt="CoinSurgical" />
+        <Image className="brand-marquee-logo" src="/logo.png" alt="CoinSurgical" width={56} height={56} />
         <div className="brand-marquee-text">
           <h2>#COINSURGICAL | Precision You Can Trust</h2>
         </div>
@@ -33,14 +33,16 @@ const BrandMarquee = () => {
         {repeatedGroups.map((group) => (
           <div className="brand-image-marquee__group" key={group}>
             {marqueeImages.map((image, index) => (
-              <img
+              <Image
                 className="brand-image-slide"
                 key={`${group}-${index}-${image.src}`}
                 src={image.src}
                 alt={image.alt}
-                loading={group === 0 ? 'eager' : 'lazy'}
-                decoding="async"
-                fetchPriority={group === 0 && index < 3 ? 'high' : 'auto'}
+                width={260}
+                height={260}
+                loading="lazy"
+                quality={60}
+                sizes="260px"
               />
             ))}
           </div>

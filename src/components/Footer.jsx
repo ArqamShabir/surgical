@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const FacebookIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -29,11 +28,11 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About us</Link></li>
-              <li><Link to="/catalog">Our Products</Link></li>
-              <li><Link to="/quote">Trade Show</Link></li>
-              <li><Link to="/contact">Contact us</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About us</Link></li>
+              <li><Link href="/catalog">Our Products</Link></li>
+              <li><Link href="/quote">Trade Show</Link></li>
+              <li><Link href="/contact">Contact us</Link></li>
             </ul>
           </div>
           <div className="footer-col">

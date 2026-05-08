@@ -1,16 +1,14 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import PageBanner from '../components/PageBanner';
 import products from '../data/products.json';
 import { getProductPath } from '../utils/productUrls';
+import ProductImage from '../components/ProductImage';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
-const fallbackImage = '/scalpel.png';
-const getImageSrc = (image) => {
-  const src = typeof image === 'string' ? image : image?.src;
-  return src || fallbackImage;
-};
-const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
 const collections = [
   'Facelift Scissors',
   'Dissecting Scissors',
@@ -47,10 +45,17 @@ const getProductPriceRange = (product) => {
 };
 
 const Catalog = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [filtersOpen, setFiltersOpen] = useState(false);
   const searchTerm = searchParams.get('q') || '';
   const selectedCollections = searchParams.getAll('collection');
+
+  const setSearchParams = (nextParams) => {
+    const queryString = nextParams.toString();
+    router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
+  };
 
   const toggleCollection = (collection) => {
     const nextParams = new URLSearchParams(searchParams);
@@ -69,7 +74,7 @@ const Catalog = () => {
   };
 
   const clearFilters = () => {
-    setSearchParams({});
+    setSearchParams(new URLSearchParams());
   };
 
   React.useEffect(() => {
@@ -153,14 +158,14 @@ const Catalog = () => {
               <div className="product-grid">
                 {filteredProducts.map((product) => (
                 <div className="product-card" key={product.id}>
-                  <Link to={getProductPath(product)} className="product-image">
-                    <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <Link href={getProductPath(product)} className="product-image">
+                    <ProductImage image={product.images?.[0]} altFallback={product.title} />
                   </Link>
                   <div className="product-info">
                     <div className="product-code">Article {product.article}</div>
                     <h3 className="product-title">{product.title}</h3>
                     <div className="product-price">{getProductPriceRange(product)}</div>
-                    <Link to={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                    <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
                   </div>
                 </div>
                 ))}

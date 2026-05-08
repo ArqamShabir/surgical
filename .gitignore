@@ -8,9 +8,13 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.next
+out
 dist
 dist-ssr
 *.local
+.env
+.env*.local
 public/mail-config.php
 
 # Editor directories and files

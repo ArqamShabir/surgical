@@ -1,14 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import products from '../data/products.json';
 import { getProductPath } from '../utils/productUrls';
-
-const fallbackImage = '/scalpel.png';
-const getImageSrc = (image) => {
-  const src = typeof image === 'string' ? image : image?.src;
-  return src || fallbackImage;
-};
-const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
+import ProductImage from '../components/ProductImage';
 
 const Home = () => {
   const featuredProducts = products.slice(0, 3);
@@ -20,7 +13,7 @@ const Home = () => {
           <h1>Premium Surgical Instruments</h1>
           <p>Explore our comprehensive catalog of surgical tools engineered for perfection, durability, and absolute reliability in the operating room.</p>
           <div className="hero-actions">
-            <Link to="/catalog" className="btn btn-ghost">Check Our Products</Link>
+            <Link href="/catalog" className="btn btn-ghost">Check Our Products</Link>
           </div>
         </div>
       </section>
@@ -54,19 +47,19 @@ const Home = () => {
           <div className="product-grid">
             {featuredProducts.map((product) => (
               <div className="product-card" key={product.id}>
-                <Link to={getProductPath(product)} className="product-image">
-                  <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                <Link href={getProductPath(product)} className="product-image">
+                  <ProductImage image={product.images?.[0]} altFallback={product.title} priority={product.id === featuredProducts[0]?.id} />
                 </Link>
                 <div className="product-info">
                   <div className="product-code">Article {product.article}</div>
                   <h3 className="product-title">{product.title}</h3>
-                  <Link to={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>View Details</Link>
+                  <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>View Details</Link>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center" style={{ marginTop: '3rem' }}>
-            <Link to="/catalog" className="btn btn-primary">View All Products</Link>
+            <Link href="/catalog" className="btn btn-primary">View All Products</Link>
           </div>
         </div>
       </section>

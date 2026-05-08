@@ -1,28 +1,27 @@
+'use client';
+
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { CartContext } from '../context/CartContext';
 import products from '../data/products.json';
 import { getProductPath } from '../utils/productUrls';
-
-const fallbackImage = '/scalpel.png';
-const getImageSrc = (image) => {
-  const src = typeof image === 'string' ? image : image?.src;
-  return src || fallbackImage;
-};
-const getImageAlt = (image, fallback) => typeof image === 'string' ? fallback : image?.alt || fallback;
+import ProductImage from './ProductImage';
 
 const Header = () => {
   const { cart, setIsDrawerOpen } = useContext(CartContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [desktopSearchOpen, setDesktopSearchOpen] = useState(false);
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get('q') || '');
-  const location = useLocation();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  const isActive = (path) => location.pathname === path ? 'active' : '';
+  const isActive = (path) => pathname === path ? 'active' : '';
 
   useEffect(() => {
     setSearchTerm(searchParams.get('q') || '');
@@ -45,7 +44,10 @@ const Header = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
+    const query = searchTerm.trim();
+    router.push(query ? `/catalog?q=${encodeURIComponent(query)}` : '/catalog');
     setMobileMenuOpen(false);
+    closeSearchResults();
   };
 
   const searchQuery = searchTerm.trim().toLowerCase();
@@ -89,16 +91,16 @@ const Header = () => {
               <line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" />
             </svg>
           </button>
-          <Link to="/" className="logo">
-            <img src="/logo.png" alt="CoinSurgical" className="logo-image" />
+          <Link href="/" className="logo">
+            <Image src="/logo.png" alt="CoinSurgical" className="logo-image" width={180} height={62} priority />
           </Link>
         </div>
         <nav className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <Link to="/" className={isActive('/')} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link to="/about" className={isActive('/about')} onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-          <Link to="/catalog" className={isActive('/catalog')} onClick={() => setMobileMenuOpen(false)}>Our Products</Link>
-          <Link to="/quote" className={isActive('/quote')} onClick={() => setMobileMenuOpen(false)}>Trade Show</Link>
-          <Link to="/contact" className={isActive('/contact')} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+          <Link href="/" className={isActive('/')} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className={isActive('/about')} onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+          <Link href="/catalog" className={isActive('/catalog')} onClick={() => setMobileMenuOpen(false)}>Our Products</Link>
+          <Link href="/quote" className={isActive('/quote')} onClick={() => setMobileMenuOpen(false)}>Trade Show</Link>
+          <Link href="/contact" className={isActive('/contact')} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </nav>
         <div className="header-actions">
           <form className="header-search" onSubmit={handleSearchSubmit}>
@@ -114,8 +116,8 @@ const Header = () => {
               <div className="desktop-search-results">
                 {searchQuery && searchResults.length === 0 && <div className="desktop-search-empty">No products found.</div>}
                 {searchResults.map((product) => (
-                  <Link key={product.id} to={getProductPath(product)} className="desktop-search-result" onClick={closeSearchResults}>
-                    <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <Link key={product.id} href={getProductPath(product)} className="desktop-search-result" onClick={closeSearchResults}>
+                    <ProductImage image={product.images?.[0]} altFallback={product.title} className="search-result-image" sizes="54px" />
                     <span>
                       <strong>{product.title}</strong>
                       <small>Article {product.article}</small>
@@ -153,8 +155,8 @@ const Header = () => {
           <div className="mobile-search-results">
             {searchQuery && searchResults.length === 0 && <div className="mobile-search-empty">No products found.</div>}
             {searchResults.map((product) => (
-              <Link key={product.id} to={getProductPath(product)} className="mobile-search-result" onClick={closeSearchResults}>
-                <img src={getImageSrc(product.images?.[0])} alt={getImageAlt(product.images?.[0], product.title)} onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+              <Link key={product.id} href={getProductPath(product)} className="mobile-search-result" onClick={closeSearchResults}>
+                <ProductImage image={product.images?.[0]} altFallback={product.title} className="search-result-image" sizes="58px" />
                 <span>
                   <strong>{product.title}</strong>
                   <small>Article {product.article}</small>
