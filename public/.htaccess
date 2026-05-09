@@ -27,6 +27,8 @@
   RewriteRule ^product/24$ /product/24-mayo-straight [R=301,L]
   RewriteRule ^product/25$ /product/25-mayo-curved [R=301,L]
   RewriteRule ^index\.html$ - [L]
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
