@@ -60,7 +60,8 @@ export default async function Page({ params }) {
     redirect(getProductPath(product));
   }
 
-  const image = typeof product.images?.[0] === 'string' ? product.images[0] : product.images?.[0]?.src;
+  const rawImage = typeof product.images?.[0] === 'string' ? product.images[0] : product.images?.[0]?.src;
+  const image = rawImage?.startsWith('/') ? `https://coinsurgical.shop${rawImage}` : rawImage;
   const price = product.price ?? product.variants?.find((variant) => typeof variant.price === 'number')?.price;
   const productSchema = {
     '@context': 'https://schema.org',
@@ -82,6 +83,22 @@ export default async function Page({ params }) {
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
             url: `https://coinsurgical.shop${getProductPath(product)}`,
+            ...(product.freeShipping
+              ? {
+                  shippingDetails: {
+                    '@type': 'OfferShippingDetails',
+                    shippingRate: {
+                      '@type': 'MonetaryAmount',
+                      value: 0,
+                      currency: 'USD',
+                    },
+                    shippingDestination: {
+                      '@type': 'DefinedRegion',
+                      addressCountry: ['MX', 'BO', 'AR'],
+                    },
+                  },
+                }
+              : {}),
           },
         }
       : {}),

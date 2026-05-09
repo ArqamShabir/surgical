@@ -166,6 +166,13 @@ const Product = ({ product }) => {
 
             {selectedPrice && <div className="price-display">{formatPrice(selectedPrice)}</div>}
 
+            {product.freeShipping && (
+              <div className="product-promo-strip">
+                <strong>Free worldwide shipping</strong>
+                <span>Limited 30-day offer for this set.</span>
+              </div>
+            )}
+
             <p className="product-description">{product.description}</p>
 
             {!!product.variants?.length && (
@@ -213,6 +220,17 @@ const Product = ({ product }) => {
                   ))}
                 </tbody>
               </table>
+            )}
+
+            {product.includedPdf && (
+              <a
+                className="btn btn-outline included-set-btn"
+                href={product.includedPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                See What's Included in This Set
+              </a>
             )}
 
             <div className="add-to-inquiry">

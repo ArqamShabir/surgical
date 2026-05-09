@@ -18,6 +18,7 @@ const collections = [
   'Dissecting Forceps',
   'Retractors & Skin Hooks',
   'Self Retaining Retractors',
+  'Rhinoplasty Sets',
   'Dissectors',
   'Scalpel Handles',
   'FaceLift Forceps',

@@ -2660,5 +2660,37 @@
     { "label": "Material", "value": "German Stainless Steel (316L)" },
     { "label": "Sterilization", "value": "Autoclavable" }
   ]
+},
+{
+  "id": "96",
+  "article": "CS-RHINO-82-GOLD",
+  "title": "Rhinoplasty 82 PCS Set Gold",
+  "category": "Rhinoplasty Sets",
+  "price": 750,
+  "images": [
+    {
+      "src": "/rhinoplasty-82pcs-set.jpeg",
+      "alt": "Rhinoplasty 82 pieces gold surgical instrument set"
+    }
+  ],
+  "description": "Complete 82-piece rhinoplasty instrument set with gold-finished handles for professional nasal surgery workflows. The set is supplied as a ready-to-quote package at $750 with free worldwide shipping during the current 30-day promotion.",
+  "includedPdf": "/accel-rhinoplasty-nose-set-gold.pdf",
+  "freeShipping": true,
+  "variants": [
+    {
+      "name": "82 PCS Gold Set",
+      "price": 750,
+      "sizes": [
+        { "name": "Complete Set", "code": "CS-RHINO-82-GOLD" }
+      ]
+    }
+  ],
+  "specs": [
+    { "label": "Pieces", "value": "82 instruments" },
+    { "label": "Set Finish", "value": "Gold handle finish" },
+    { "label": "Shipping", "value": "Free worldwide shipping" },
+    { "label": "Material", "value": "German Stainless Steel (316L)" },
+    { "label": "Sterilization", "value": "Autoclavable" }
+  ]
 }
 ]

@@ -14,6 +14,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [desktopSearchOpen, setDesktopSearchOpen] = useState(false);
+  const [headerHidden, setHeaderHidden] = useState(false);
   const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get('q') || '');
   const pathname = usePathname();
@@ -36,6 +37,23 @@ const Header = () => {
       document.body.classList.remove('no-scroll');
     };
   }, [mobileSearchOpen]);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const updateHeaderVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      const shouldHide = isScrollingDown && currentScrollY > 140 && !mobileMenuOpen && !mobileSearchOpen;
+
+      setHeaderHidden(shouldHide);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+
+    return () => window.removeEventListener('scroll', updateHeaderVisibility);
+  }, [mobileMenuOpen, mobileSearchOpen]);
 
   const updateSearch = (value) => {
     setSearchTerm(value);
@@ -78,7 +96,10 @@ const Header = () => {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${headerHidden ? 'site-header-hidden' : ''}`}>
+      <div className="shipping-topbar">
+        Free worldwide shipping for the next 30 days
+      </div>
       <div className="container header-inner">
         <div className="brand-row">
           <button

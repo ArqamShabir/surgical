@@ -5,6 +5,7 @@ import ProductImage from '../components/ProductImage';
 
 const Home = () => {
   const featuredProducts = products.slice(0, 3);
+  const rhinoplastySet = products.find((product) => product.id === '96');
 
   return (
     <>
@@ -38,6 +39,30 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {rhinoplastySet && (
+        <section className="section featured-set-section">
+          <div className="container">
+            <div className="featured-set">
+              <Link href={getProductPath(rhinoplastySet)} className="featured-set-image">
+                <ProductImage
+                  image={rhinoplastySet.images?.[0]}
+                  altFallback={rhinoplastySet.title}
+                  sizes="(max-width: 900px) 100vw, 48vw"
+                />
+              </Link>
+              <div className="featured-set-content">
+                <div className="product-code">Featured Set</div>
+                <h2>{rhinoplastySet.title}</h2>
+                <p>{rhinoplastySet.description}</p>
+                <div className="featured-set-price">$750.00</div>
+                <div className="featured-set-note">Free worldwide shipping for a limited 30-day offer.</div>
+                <Link href={getProductPath(rhinoplastySet)} className="btn btn-primary">View Details</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="container">
