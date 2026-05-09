@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { CartContext } from '../context/CartContext';
 import ProductImage from './ProductImage';
@@ -11,6 +11,22 @@ const CartDrawer = () => {
 
   const handleClose = () => setIsDrawerOpen(false);
 
+  useEffect(() => {
+    if (!isDrawerOpen) return;
+
+    const scrollY = window.scrollY;
+    document.documentElement.classList.add('drawer-open');
+    document.body.classList.add('drawer-open');
+    document.body.style.top = `-${scrollY}px`;
+
+    return () => {
+      document.documentElement.classList.remove('drawer-open');
+      document.body.classList.remove('drawer-open');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollY);
+    };
+  }, [isDrawerOpen]);
+
   return (
     <>
       <div 
@@ -20,7 +36,7 @@ const CartDrawer = () => {
       <div className={`drawer ${isDrawerOpen ? 'active' : ''}`}>
         <div className="drawer-header">
           <h2>Inquiry List</h2>
-          <button className="drawer-close" onClick={handleClose}>&times;</button>
+          <button className="drawer-close" onClick={handleClose} aria-label="Close inquiry list">&times;</button>
         </div>
         <div className="drawer-content">
           {cart.length === 0 ? (

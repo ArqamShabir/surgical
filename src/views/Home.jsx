@@ -4,7 +4,7 @@ import { getProductPath } from '../utils/productUrls';
 import ProductImage from '../components/ProductImage';
 
 const Home = () => {
-  const featuredProducts = products.slice(0, 3);
+  const featuredProducts = products.slice(0, 4);
   const rhinoplastySet = products.find((product) => product.id === '96');
 
   return (
