@@ -12,7 +12,7 @@ const FormModal = ({ open, type = 'success', title, message, onClose }) => {
         aria-labelledby="form-modal-title"
         onClick={(event) => event.stopPropagation()}
       >
-        <button type="button" className="form-modal-close" onClick={onClose} aria-label="Close message">
+        <button type="button" className="form-modal-close" onClick={onClose} aria-label="Cerrar mensaje">
           &times;
         </button>
         <div className="form-modal-icon" aria-hidden="true">

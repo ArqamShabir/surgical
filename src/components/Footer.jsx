@@ -26,27 +26,27 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Enlaces Rápidos</h4>
             <ul className="footer-links">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About us</Link></li>
-              <li><Link href="/catalog">Our Products</Link></li>
-              <li><Link href="/quote">Trade Show</Link></li>
-              <li><Link href="/contact">Contact us</Link></li>
+              <li><Link href="/">Inicio</Link></li>
+              <li><Link href="/about">Nosotros</Link></li>
+              <li><Link href="/catalog">Productos</Link></li>
+              <li><Link href="/quote">Consulta</Link></li>
+              <li><Link href="/contact">Contacto</Link></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Get In Touch</h4>
+            <h4>Contáctenos</h4>
             <ul className="footer-links">
-              <li>Phone: +92 3494846107</li>
+              <li>Teléfono: +92 3494846107</li>
               <li style={{display:'none'}}>Fax: +1 800 555 0199</li>
-              <li>Emails:</li>
+              <li>Correos:</li>
               <li>coinsurgical@gmail.com</li>
               <li>accel8295@gmail.com</li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Follow Us</h4>
+            <h4>Síganos</h4>
             <div className="footer-social">
               <a href="https://www.facebook.com/coinsurgical" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FacebookIcon />
@@ -60,19 +60,19 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-col">
-            <h4>Address</h4>
+            <h4>Dirección</h4>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.8 }}>
               Sialkot, Punjab<br/>
-              Pakistan
+              Pakistán
             </p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 CoinSurgical. All rights reserved.</p>
+          <p>&copy; 2026 CoinSurgical. Todos los derechos reservados.</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             <span style={{ fontWeight: 600 }}>ISO 9001:2015</span>
-            <span style={{ fontWeight: 600 }}>CE Mark</span>
-            <span style={{ fontWeight: 600 }}>FDA Approved</span>
+            <span style={{ fontWeight: 600 }}>Marcado CE</span>
+            <span style={{ fontWeight: 600 }}>Aprobado por FDA</span>
           </div>
         </div>
       </div>

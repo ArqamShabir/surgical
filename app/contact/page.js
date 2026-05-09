@@ -1,8 +1,8 @@
 import Contact from '@/views/Contact';
 
 export const metadata = {
-  title: 'Contact CoinSurgical | Surgical Instruments',
-  description: 'Contact CoinSurgical for surgical instrument inquiries, trade requests, product details, and supplier information.',
+  title: 'Contacto CoinSurgical | Instrumental Quirúrgico',
+  description: 'Contacte a CoinSurgical para consultas sobre instrumental quirúrgico, solicitudes comerciales, detalles de producto e información para distribuidores.',
   alternates: {
     canonical: '/contact',
   },

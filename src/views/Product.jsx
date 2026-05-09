@@ -9,6 +9,15 @@ import { getProductPath } from '../utils/productUrls';
 import ProductImage, { getImageAlt, getImageSrc } from '../components/ProductImage';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
+const specLabelMap = {
+  Material: 'Material',
+  Sterilization: 'Esterilización'
+};
+
+const specValueMap = {
+  'German Stainless Steel (316L)': 'Acero inoxidable alemán (316L)',
+  Autoclavable: 'Autoclavable'
+};
 
 const getProductPriceRange = (product) => {
   const prices = [
@@ -103,7 +112,7 @@ const Product = ({ product }) => {
 
   return (
     <>
-      <PageBanner title={selectedTitle} parent="Our Products" parentLink="/catalog" />
+      <PageBanner title={selectedTitle} parent="Nuestros Productos" parentLink="/catalog" />
       <div className="container section" style={{ paddingTop: 0 }}>
         <div className="product-detail-layout">
           <div className="product-gallery-container">
@@ -122,7 +131,7 @@ const Product = ({ product }) => {
                 type="button"
                 className="image-zoom-btn"
                 onClick={() => setIsZoomActive((active) => !active)}
-                aria-label={isZoomActive ? 'Turn off image zoom' : 'Zoom product image'}
+                aria-label={isZoomActive ? 'Desactivar zoom de imagen' : 'Ampliar imagen del producto'}
               >
                 <svg className="zoom-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <circle cx="10.5" cy="10.5" r="6.5"></circle>
@@ -142,7 +151,7 @@ const Product = ({ product }) => {
                 type="button"
                 className="image-click-target"
                 onClick={() => setIsZoomActive((active) => !active)}
-                aria-label={isZoomActive ? 'Turn off image zoom' : 'Zoom product image'}
+                aria-label={isZoomActive ? 'Desactivar zoom de imagen' : 'Ampliar imagen del producto'}
               ></button>
             </div>
             <div className="thumbnail-grid">
@@ -152,7 +161,7 @@ const Product = ({ product }) => {
                   className={`thumbnail ${getImageSrc(mainImage) === getImageSrc(img) ? 'active' : ''}`}
                   onClick={() => setMainImage(img)}
                 >
-                  <ProductImage image={img} alt={getImageAlt(img, `${selectedTitle} view ${i + 1}`)} sizes="120px" />
+                  <ProductImage image={img} alt={getImageAlt(img, `${selectedTitle} vista ${i + 1}`)} sizes="120px" />
                 </div>
               ))}
             </div>
@@ -160,7 +169,7 @@ const Product = ({ product }) => {
 
           <div className="product-details">
             <div className="product-header">
-              <div className="product-code" style={{ fontSize: '1.1rem' }}>Article {selectedArticle}</div>
+              <div className="product-code" style={{ fontSize: '1.1rem' }}>Artículo {selectedArticle}</div>
               <h1 style={{ color: 'var(--color-charcoal)', marginBottom: '1rem' }}>{selectedTitle}</h1>
             </div>
 
@@ -168,8 +177,8 @@ const Product = ({ product }) => {
 
             {product.freeShipping && (
               <div className="product-promo-strip">
-                <strong>Free worldwide shipping</strong>
-                <span>Limited 30-day offer for this set.</span>
+                <strong>Envío mundial gratis</strong>
+                <span>Oferta limitada de 30 días para este set.</span>
               </div>
             )}
 
@@ -177,7 +186,7 @@ const Product = ({ product }) => {
 
             {!!product.variants?.length && (
               <div className="variant-selector">
-                <h4>Select Variant</h4>
+                <h4>Seleccione Variante</h4>
                 <div className="variant-options">
                   {product.variants.map((variant) => (
                     <button
@@ -194,7 +203,7 @@ const Product = ({ product }) => {
 
             {!!availableSizes.length && (
               <div className="variant-selector">
-                <h4>Select Size</h4>
+                <h4>Seleccione Tamaño</h4>
                 <div className="variant-options">
                   {availableSizes.map((size) => (
                     <button
@@ -214,8 +223,8 @@ const Product = ({ product }) => {
                 <tbody>
                   {product.specs.map((spec) => (
                     <tr key={spec.label}>
-                      <th>{spec.label}</th>
-                      <td>{spec.value}</td>
+                      <th>{specLabelMap[spec.label] || spec.label}</th>
+                      <td>{specValueMap[spec.value] || spec.value}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -229,7 +238,7 @@ const Product = ({ product }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                What's Included in This Set
+                Qué Incluye Este Set
               </a>
             )}
 
@@ -245,15 +254,15 @@ const Product = ({ product }) => {
                 />
                 <button className="qty-btn" onClick={() => setQuantity(q => q + 1)}>+</button>
               </div>
-              <button className="btn btn-primary" onClick={handleAdd} style={{ flex: 1 }}>Add to Inquiry List</button>
+              <button className="btn btn-primary" onClick={handleAdd} style={{ flex: 1 }}>Agregar a la Lista de Consulta</button>
             </div>
 
-            {showMsg && <div style={{ color: 'var(--color-primary-teal)', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 600 }}>Item added to your inquiry list.</div>}
+            {showMsg && <div style={{ color: 'var(--color-primary-teal)', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 600 }}>Producto agregado a su lista de consulta.</div>}
           </div>
         </div>
 
         <div className="section-header" style={{ margin: '2rem' }}>
-          <h2>Related Instruments</h2>
+          <h2>Instrumentos Relacionados</h2>
         </div>
         <div className="product-grid">
           {products.filter((item) => item.id !== product.id).slice(0, 2).map((item) => (
@@ -262,9 +271,9 @@ const Product = ({ product }) => {
                 <ProductImage image={item.images?.[0]} altFallback={item.title} />
               </Link>
               <div className="product-info">
-                <div className="product-code">Article {item.article}</div>
+                <div className="product-code">Artículo {item.article}</div>
                 <h3 className="product-title">{item.title}</h3>
-                <Link href={getProductPath(item)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                <Link href={getProductPath(item)} className="btn btn-outline product-action" style={{ width: '100%' }}>Ver Detalles</Link>
               </div>
             </div>
           ))}

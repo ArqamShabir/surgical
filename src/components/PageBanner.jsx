@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const PageBanner = ({ title, parent = 'Home', parentLink = '/' }) => {
+const PageBanner = ({ title, parent = 'Inicio', parentLink = '/' }) => {
   return (
     <div className="page-banner bread-p">
       <div className="container">

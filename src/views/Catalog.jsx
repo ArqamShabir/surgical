@@ -9,6 +9,28 @@ import { getProductPath } from '../utils/productUrls';
 import ProductImage from '../components/ProductImage';
 
 const formatPrice = (price) => `$${Number(price).toFixed(2)}`;
+const collectionLabels = {
+  'Facelift Scissors': 'Tijeras para Lifting Facial',
+  'Dissecting Scissors': 'Tijeras de Disección',
+  Scissors: 'Tijeras',
+  'Tenotomy Scissors': 'Tijeras de Tenotomía',
+  'Needle Holders': 'Portaagujas',
+  'Dissecting Forceps': 'Pinzas de Disección',
+  'Retractors & Skin Hooks': 'Separadores y Ganchos de Piel',
+  'Self Retaining Retractors': 'Separadores Autoestáticos',
+  'Rhinoplasty Sets': 'Sets de Rinoplastia',
+  Dissectors: 'Disectores',
+  'Scalpel Handles': 'Mangos de Bisturí',
+  'FaceLift Forceps': 'Pinzas para Lifting Facial',
+  'Areola Markers': 'Marcadores de Areola',
+  'Breast Retractors': 'Separadores Mamarios',
+  'Nasal Instruments': 'Instrumental Nasal',
+  'Browlift Instruments': 'Instrumental para Lifting de Cejas',
+  'Maxillofacial Instruments': 'Instrumental Maxilofacial',
+  'Micro Surgery Instruments': 'Instrumental de Microcirugía',
+  'Ultra Fine Micro Instruments': 'Microinstrumental Ultrafino'
+};
+
 const collections = [
   'Facelift Scissors',
   'Dissecting Scissors',
@@ -116,25 +138,25 @@ const Catalog = () => {
 
   return (
     <>
-      <PageBanner title="Our Products" />
+      <PageBanner title="Nuestros Productos" />
       <div className="container section" style={{ paddingTop: 0 }}>
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--color-primary-teal)' }}>Surgical Instruments</h1>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--color-primary-teal)' }}>Instrumental Quirúrgico</h1>
         </div>
 
         <div className="catalog-summary">
-          <div>{filteredProducts.length} product{filteredProducts.length === 1 ? '' : 's'} found</div>
-          {searchTerm && <div>Search: <strong>{searchTerm}</strong></div>}
+          <div>{filteredProducts.length} producto{filteredProducts.length === 1 ? '' : 's'} encontrado{filteredProducts.length === 1 ? '' : 's'}</div>
+          {searchTerm && <div>Búsqueda: <strong>{searchTerm}</strong></div>}
         </div>
 
         <div className="catalog-layout">
           <aside className={`filters ${filtersOpen ? 'active' : ''}`}>
-            <button type="button" className="mobile-filter-close" onClick={() => setFiltersOpen(false)} aria-label="Close filters">&times;</button>
+            <button type="button" className="mobile-filter-close" onClick={() => setFiltersOpen(false)} aria-label="Cerrar filtros">&times;</button>
             <div className="filter-group">
               <div className="filters-heading">
-                <h3>Collection</h3>
+                <h3>Colección</h3>
                 {(selectedCollections.length > 0 || searchTerm) && (
-                  <button type="button" className="filter-clear" onClick={clearFilters}>Clear</button>
+                  <button type="button" className="filter-clear" onClick={clearFilters}>Limpiar</button>
                 )}
               </div>
               <ul className="filter-list">
@@ -146,7 +168,7 @@ const Catalog = () => {
                         checked={selectedCollections.includes(collection)}
                         onChange={() => toggleCollection(collection)}
                       />
-                      <span>{collection}</span>
+                      <span>{collectionLabels[collection] || collection}</span>
                     </label>
                   </li>
                 ))}
@@ -163,19 +185,19 @@ const Catalog = () => {
                     <ProductImage image={product.images?.[0]} altFallback={product.title} />
                   </Link>
                   <div className="product-info">
-                    <div className="product-code">Article {product.article}</div>
+                    <div className="product-code">Artículo {product.article}</div>
                     <h3 className="product-title">{product.title}</h3>
                     <div className="product-price">{getProductPriceRange(product)}</div>
-                    <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%' }}>View Details</Link>
+                    <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%' }}>Ver Detalles</Link>
                   </div>
                 </div>
                 ))}
               </div>
             ) : (
               <div className="empty-catalog">
-                <h3>No Products Found</h3>
-                <p>Try a different search term or clear the collection filters.</p>
-                <button type="button" className="btn btn-outline" onClick={clearFilters}>Clear Filters</button>
+                <h3>No se encontraron productos</h3>
+                <p>Pruebe con otro término de búsqueda o limpie los filtros de colección.</p>
+                <button type="button" className="btn btn-outline" onClick={clearFilters}>Limpiar Filtros</button>
               </div>
             )}
           </div>
@@ -185,9 +207,9 @@ const Catalog = () => {
         type="button"
         className={`mobile-filter-overlay ${filtersOpen ? 'active' : ''}`}
         onClick={() => setFiltersOpen(false)}
-        aria-label="Close filters"
+        aria-label="Cerrar filtros"
       ></button>
-      <button type="button" className="mobile-filter-fab" onClick={() => setFiltersOpen(true)}>Filters</button>
+      <button type="button" className="mobile-filter-fab" onClick={() => setFiltersOpen(true)}>Filtros</button>
     </>
   );
 };

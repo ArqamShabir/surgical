@@ -50,7 +50,7 @@ const ProductImage = ({
         />
       ) : (
         <span className="image-missing" aria-label={label}>
-          Image unavailable
+          Imagen no disponible
         </span>
       )}
     </span>

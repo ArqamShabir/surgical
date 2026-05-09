@@ -1,8 +1,8 @@
 import Quote from '@/views/Quote';
 
 export const metadata = {
-  title: 'Request a Quote | CoinSurgical',
-  description: 'Send CoinSurgical your selected surgical instruments and request trade pricing or product information.',
+  title: 'Solicitar Cotización | CoinSurgical',
+  description: 'Envíe a CoinSurgical sus instrumentos quirúrgicos seleccionados y solicite precio comercial o información del producto.',
   alternates: {
     canonical: '/quote',
   },

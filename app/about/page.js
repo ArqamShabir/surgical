@@ -1,8 +1,8 @@
 import About from '@/views/About';
 
 export const metadata = {
-  title: 'About CoinSurgical | Surgical Instrument Supplier',
-  description: 'Learn about CoinSurgical, a supplier of precision surgical and medical instruments for clinics, distributors, and healthcare professionals.',
+  title: 'Sobre CoinSurgical | Proveedor de Instrumental Quirúrgico',
+  description: 'Conozca CoinSurgical, proveedor de instrumental quirúrgico y médico de precisión para clínicas, distribuidores y profesionales de la salud.',
   alternates: {
     canonical: '/about',
   },

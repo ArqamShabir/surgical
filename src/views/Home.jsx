@@ -11,10 +11,10 @@ const Home = () => {
     <>
       <section className="hero">
         <div className="container">
-          <h1>Premium Surgical Instruments</h1>
-          <p>Explore our comprehensive catalog of surgical tools engineered for perfection, durability, and absolute reliability in the operating room.</p>
+          <h1>Instrumental Quirúrgico Premium</h1>
+          <p>Explore nuestro catálogo completo de instrumental quirúrgico diseñado para precisión, durabilidad y máxima confiabilidad en el quirófano.</p>
           <div className="hero-actions">
-            <Link href="/catalog" className="btn btn-ghost">Check Our Products</Link>
+            <Link href="/catalog" className="btn btn-ghost">Ver Productos</Link>
           </div>
         </div>
       </section>
@@ -23,19 +23,19 @@ const Home = () => {
         <div className="container trust-inner" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '2rem' }}>
           <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}>
             <span className="trust-icon" style={{ color: 'var(--color-primary-teal)', fontSize: '1.5rem' }}>✔</span>
-            <span className="trust-text">ISO 13485 Certified</span>
+            <span className="trust-text">Certificación ISO 13485</span>
           </div>
           <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}>
             <span className="trust-icon" style={{ color: 'var(--color-primary-teal)', fontSize: '1.5rem' }}>✦</span>
-            <span className="trust-text">Premium Grade Steel</span>
+            <span className="trust-text">Acero de Grado Premium</span>
           </div>
           <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}>
             <span className="trust-icon" style={{ color: 'var(--color-primary-teal)', fontSize: '1.5rem' }}>⟳</span>
-            <span className="trust-text">Global Distribution</span>
+            <span className="trust-text">Distribución Global</span>
           </div>
           <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}>
             <span className="trust-icon" style={{ color: 'var(--color-primary-teal)', fontSize: '1.5rem' }}>🛡</span>
-            <span className="trust-text">CE Marked</span>
+            <span className="trust-text">Marcado CE</span>
           </div>
         </div>
       </section>
@@ -52,12 +52,12 @@ const Home = () => {
                 />
               </Link>
               <div className="featured-set-content">
-                <div className="product-code">Featured Set</div>
+                <div className="product-code">Set Destacado</div>
                 <h2>{rhinoplastySet.title}</h2>
                 <p>{rhinoplastySet.description}</p>
                 <div className="featured-set-price">$750.00</div>
-                <div className="featured-set-note">Free worldwide shipping for a limited 30-day offer.</div>
-                <Link href={getProductPath(rhinoplastySet)} className="btn btn-primary">View Details</Link>
+                <div className="featured-set-note">Envío mundial gratis por una oferta limitada de 30 días.</div>
+                <Link href={getProductPath(rhinoplastySet)} className="btn btn-primary">Ver Detalles</Link>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Home = () => {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Featured Products</h2>
+            <h2>Productos Destacados</h2>
           </div>
           <div className="product-grid">
             {featuredProducts.map((product) => (
@@ -76,15 +76,15 @@ const Home = () => {
                   <ProductImage image={product.images?.[0]} altFallback={product.title} priority={product.id === featuredProducts[0]?.id} />
                 </Link>
                 <div className="product-info">
-                  <div className="product-code">Article {product.article}</div>
+                  <div className="product-code">Artículo {product.article}</div>
                   <h3 className="product-title">{product.title}</h3>
-                  <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>View Details</Link>
+                  <Link href={getProductPath(product)} className="btn btn-outline product-action" style={{ width: '100%', marginTop: '1rem' }}>Ver Detalles</Link>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center" style={{ marginTop: '3rem' }}>
-            <Link href="/catalog" className="btn btn-primary">View All Products</Link>
+            <Link href="/catalog" className="btn btn-primary">Ver Todos los Productos</Link>
           </div>
         </div>
       </section>

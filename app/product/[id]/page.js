@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
 
   if (!product) {
     return {
-      title: 'Product Not Found',
+      title: 'Producto no encontrado',
       robots: {
         index: false,
         follow: false,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: product.title,
-    description: product.description || `View ${product.title}, a precision surgical instrument from CoinSurgical.`,
+    description: product.description || `Vea ${product.title}, un instrumento quirúrgico de precisión de CoinSurgical.`,
     alternates: {
       canonical,
     },

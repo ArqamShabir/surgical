@@ -27,8 +27,8 @@ const Contact = () => {
     setModal({
       open: true,
       type: 'success',
-      title: 'Message Sent',
-      message: 'Thanks. Your message has been sent and we will get back to you shortly.'
+      title: 'Mensaje Enviado',
+      message: 'Gracias. Su mensaje ha sido enviado y nos comunicaremos con usted en breve.'
     });
     form.reset();
 
@@ -51,48 +51,48 @@ const Contact = () => {
 
   return (
     <>
-      <PageBanner title="Contact Us" />
+      <PageBanner title="Contacto" />
       <div className="container section" style={{ paddingTop: 0 }}>
         <div className="contact-layout">
           <div className="contact-info">
-            <h3>Get in Touch</h3>
-            <p>Our dedicated B2B sales team is ready to assist you with catalog requests, custom orders, and global distribution inquiries.</p>
+            <h3>Contáctenos</h3>
+            <p>Nuestro equipo de ventas B2B está listo para ayudarle con solicitudes de catálogo, pedidos personalizados y consultas de distribución global.</p>
             <ul className="contact-details">
-              <li><strong>Email:</strong> coinsurgical@gmail.com</li>
-              <li><strong>Phone:</strong> +92 3494846107</li>
-              <li><strong>Headquarters:</strong><br/>Sialkot, Punjab<br/>Pakistan</li>
+              <li><strong>Correo:</strong> coinsurgical@gmail.com</li>
+              <li><strong>Teléfono:</strong> +92 3494846107</li>
+              <li><strong>Sede:</strong><br/>Sialkot, Punjab<br/>Pakistán</li>
             </ul>
           </div>
 
           <div className="contact-form-section">
-            <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--color-primary-teal)' }}>Send a Message</h3>
+            <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--color-primary-teal)' }}>Enviar Mensaje</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-honeypot" aria-hidden="true">
-                <label>Website</label>
+                <label>Sitio web</label>
                 <input type="text" name="website" tabIndex="-1" autoComplete="off" />
               </div>
               <div className="form-group">
-                <label>Name</label>
+                <label>Nombre</label>
                 <input type="text" name="name" className="form-control" maxLength="80" required />
               </div>
               <div className="form-group">
-                <label>Email</label>
+                <label>Correo Electrónico</label>
                 <input type="email" name="email" className="form-control" maxLength="120" required />
               </div>
               <div className="form-group">
-                <label>Company / Hospital</label>
+                <label>Empresa / Hospital</label>
                 <input type="text" name="company" className="form-control" maxLength="120" />
               </div>
               <div className="form-group">
-                <label>Subject</label>
+                <label>Asunto</label>
                 <input type="text" name="subject" className="form-control" maxLength="140" required />
               </div>
               <div className="form-group">
-                <label>Message</label>
+                <label>Mensaje</label>
                 <textarea name="message" className="form-control" rows="5" maxLength="2000" required></textarea>
               </div>
               <button type="submit" className="btn btn-primary">
-                Send Message
+                Enviar Mensaje
               </button>
             </form>
           </div>

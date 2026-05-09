@@ -39,13 +39,13 @@ const CartDrawer = () => {
       ></div>
       <div className={`drawer ${isDrawerOpen ? 'active' : ''}`}>
         <div className="drawer-header">
-          <h2>Inquiry List</h2>
-          <button className="drawer-close" onClick={handleClose} aria-label="Close inquiry list">&times;</button>
+          <h2>Lista de Consulta</h2>
+          <button className="drawer-close" onClick={handleClose} aria-label="Cerrar lista de consulta">&times;</button>
         </div>
         <div className="drawer-content">
           {cart.length === 0 ? (
             <p className="text-center" style={{ padding: '2rem', color: '#888' }}>
-              Your inquiry list is empty.
+              Su lista de consulta está vacía.
             </p>
           ) : (
             cart.map((item, index) => (
@@ -53,18 +53,18 @@ const CartDrawer = () => {
                 <ProductImage image={item.image} alt={item.name} className="drawer-item-image" sizes="60px" />
                 <div className="drawer-item-details">
                   <div className="drawer-item-title">{item.name}</div>
-                  <div className="drawer-item-meta">{item.variant || 'Standard'}</div>
+                  <div className="drawer-item-meta">{item.variant || 'Estándar'}</div>
                   <div className="drawer-item-price-row">
-                    <span>{formatPrice(item.price)} each</span>
+                    <span>{formatPrice(item.price)} c/u</span>
                     <strong>{formatPrice(getLineTotal(item))}</strong>
                   </div>
                   <div className="drawer-item-actions">
-                    <span>Qty: {item.quantity}</span>
+                    <span>Cant.: {item.quantity}</span>
                     <button 
                       onClick={() => removeFromCart(index)}
                       className="drawer-remove-btn"
                     >
-                      Remove
+                      Eliminar
                     </button>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const CartDrawer = () => {
               router.push('/quote');
             }}
           >
-            Send for Inquiry
+            Enviar Consulta
           </button>
         </div>
       </div>

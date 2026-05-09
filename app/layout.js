@@ -6,10 +6,10 @@ const siteUrl = 'https://coinsurgical.shop';
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'CoinSurgical | Premium Medical Instruments',
+    default: 'CoinSurgical | Instrumental Médico Premium',
     template: '%s | CoinSurgical',
   },
-  description: 'CoinSurgical supplies high-quality precision surgical and medical instruments for healthcare professionals, clinics, distributors, and trade buyers.',
+  description: 'CoinSurgical suministra instrumental quirúrgico y médico de precisión para profesionales de la salud, clínicas, distribuidores y compradores B2B.',
   robots: {
     index: true,
     follow: true,
@@ -31,7 +31,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <AppShell>{children}</AppShell>
       </body>

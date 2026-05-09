@@ -4,31 +4,31 @@ import PageBanner from '../components/PageBanner';
 const About = () => {
   return (
     <>
-      <PageBanner title="About Us" />
+      <PageBanner title="Nosotros" />
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container about-content">
           <div className="section-header">
-            <h2 style={{ color: 'var(--color-primary-teal)' }}>Our Legacy of Quality</h2>
+            <h2 style={{ color: 'var(--color-primary-teal)' }}>Nuestro Legado de Calidad</h2>
           </div>
           <p>
-            For over two decades, CoinSurgical has been at the forefront of medical instrumentation design and manufacturing. We understand that in the operating room, there is no margin for error. That is why every instrument we produce undergoes rigorous quality control and is crafted from the finest German stainless steel, titanium, and tungsten carbide.
+            Durante más de dos décadas, CoinSurgical ha estado a la vanguardia del diseño y la fabricación de instrumental médico. Entendemos que en el quirófano no hay margen de error. Por eso, cada instrumento que producimos pasa por un riguroso control de calidad y se fabrica con acero inoxidable alemán, titanio y carburo de tungsteno de la más alta calidad.
           </p>
           <p>
-            Our commitment goes beyond simply supplying tools. We partner with healthcare professionals to continuously innovate and refine our designs, ensuring optimal ergonomics, durability, and clinical efficacy.
+            Nuestro compromiso va más allá de simplemente suministrar herramientas. Trabajamos junto a profesionales de la salud para innovar y perfeccionar continuamente nuestros diseños, garantizando ergonomía, durabilidad y eficacia clínica óptimas.
           </p>
 
           <div className="stats-grid">
             <div>
               <div className="stat-num">25+</div>
-              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Years of Excellence</div>
+              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Años de Excelencia</div>
             </div>
             <div>
               <div className="stat-num">10k+</div>
-              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Instruments in Catalog</div>
+              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Instrumentos en Catálogo</div>
             </div>
             <div>
               <div className="stat-num">50+</div>
-              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Countries Served</div>
+              <div style={{ fontWeight: 600, textTransform: 'uppercase' }}>Países Atendidos</div>
             </div>
           </div>
         </div>
