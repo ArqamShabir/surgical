@@ -229,7 +229,7 @@ const Product = ({ product }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See What's Included in This Set
+                What's Included in This Set
               </a>
             )}
 
