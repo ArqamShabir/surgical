@@ -5,9 +5,13 @@ import { useRouter } from 'next/navigation';
 import { CartContext } from '../context/CartContext';
 import ProductImage from './ProductImage';
 
+const formatPrice = (price) => `$${Number(price || 0).toFixed(2)}`;
+const getLineTotal = (item) => Number(item.price || 0) * Number(item.quantity || 0);
+
 const CartDrawer = () => {
   const { cart, removeFromCart, isDrawerOpen, setIsDrawerOpen } = useContext(CartContext);
   const router = useRouter();
+  const cartTotal = cart.reduce((total, item) => total + getLineTotal(item), 0);
 
   const handleClose = () => setIsDrawerOpen(false);
 
@@ -45,16 +49,20 @@ const CartDrawer = () => {
             </p>
           ) : (
             cart.map((item, index) => (
-              <div key={index} style={{ display: 'flex', gap: '1rem', marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid #eee' }}>
+              <div key={index} className="drawer-item">
                 <ProductImage image={item.image} alt={item.name} className="drawer-item-image" sizes="60px" />
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{item.name}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#888' }}>{item.variant || 'Standard'}</div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.5rem' }}>
-                    <span style={{ fontSize: '0.85rem' }}>Qty: {item.quantity}</span>
+                <div className="drawer-item-details">
+                  <div className="drawer-item-title">{item.name}</div>
+                  <div className="drawer-item-meta">{item.variant || 'Standard'}</div>
+                  <div className="drawer-item-price-row">
+                    <span>{formatPrice(item.price)} each</span>
+                    <strong>{formatPrice(getLineTotal(item))}</strong>
+                  </div>
+                  <div className="drawer-item-actions">
+                    <span>Qty: {item.quantity}</span>
                     <button 
                       onClick={() => removeFromCart(index)}
-                      style={{ background: 'none', border: 'none', color: 'var(--color-primary-teal)', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 600 }}
+                      className="drawer-remove-btn"
                     >
                       Remove
                     </button>
@@ -65,6 +73,10 @@ const CartDrawer = () => {
           )}
         </div>
         <div className="drawer-footer">
+          <div className="drawer-total">
+            <span>Total</span>
+            <strong>{formatPrice(cartTotal)}</strong>
+          </div>
           <button 
             className="btn btn-primary" 
             style={{ width: '100%' }}

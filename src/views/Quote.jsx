@@ -8,11 +8,14 @@ import { CartContext } from '../context/CartContext';
 import ProductImage from '../components/ProductImage';
 
 const contactEndpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/contact.php';
+const formatPrice = (price) => `$${Number(price || 0).toFixed(2)}`;
+const getLineTotal = (item) => Number(item.price || 0) * Number(item.quantity || 0);
 
 const Quote = () => {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
   const [modal, setModal] = React.useState({ open: false, type: 'success', title: '', message: '', redirectOnClose: false });
   const router = useRouter();
+  const cartTotal = cart.reduce((total, item) => total + getLineTotal(item), 0);
 
   const closeModal = () => {
     const shouldRedirect = modal.redirectOnClose;
@@ -46,7 +49,9 @@ const Quote = () => {
       name: item.name,
       article: item.id,
       variant: item.variant || 'Standard',
-      quantity: item.quantity
+      quantity: item.quantity,
+      unitPrice: item.price || 0,
+      lineTotal: getLineTotal(item)
     }));
 
     clearCart();
@@ -100,6 +105,10 @@ const Quote = () => {
                     <div className="item-details">
                       <div className="item-title">{item.name}</div>
                       <div className="item-sku">Article {item.id} | {item.variant || 'Standard'}</div>
+                      <div className="item-price-row">
+                        <span>{formatPrice(item.price)} each</span>
+                        <strong>{formatPrice(getLineTotal(item))}</strong>
+                      </div>
                       <div className="item-actions">
                         <span>Quantity: <strong>{item.quantity}</strong></span>
                         <button className="remove-btn" onClick={() => removeFromCart(index)}>Remove</button>
@@ -107,6 +116,12 @@ const Quote = () => {
                     </div>
                   </div>
                 ))
+              )}
+              {cart.length > 0 && (
+                <div className="cart-total-row">
+                  <span>Total</span>
+                  <strong>{formatPrice(cartTotal)}</strong>
+                </div>
               )}
             </div>
           </div>
