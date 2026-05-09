@@ -3,6 +3,8 @@ import { getProductPath } from '@/utils/productUrls';
 
 const siteUrl = 'https://coinsurgical.shop';
 
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const now = new Date();
   const staticRoutes = [
