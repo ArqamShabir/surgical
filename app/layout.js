@@ -1,7 +1,9 @@
 import '../style.css';
+import Script from 'next/script';
 import AppShell from '@/components/AppShell';
 
 const siteUrl = 'https://coinsurgical.shop';
+const googleTagId = 'G-5FM1TPXTYK';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,6 +34,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${googleTagId}');
+        `}
+      </Script>
       <body suppressHydrationWarning>
         <AppShell>{children}</AppShell>
       </body>
