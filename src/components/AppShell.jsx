@@ -3,7 +3,6 @@
 import Header from './Header';
 import Footer from './Footer';
 import CartDrawer from './CartDrawer';
-import BrandMarquee from './BrandMarquee';
 import { Suspense } from 'react';
 import { CartProvider } from '../context/CartContext';
 
@@ -17,7 +16,6 @@ const AppShell = ({ children }) => {
       <main style={{ minHeight: '60vh' }}>
         {children}
       </main>
-      <BrandMarquee />
       <Footer />
     </CartProvider>
   );

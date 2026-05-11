@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import products from '../data/products.json';
+import activeProducts, { featuredSet } from '../data/activeProducts';
 import { getProductPath } from '../utils/productUrls';
 import ProductImage from '../components/ProductImage';
 
 const Home = () => {
-  const featuredProducts = products.slice(0, 4);
-  const rhinoplastySet = products.find((product) => product.id === '96');
+  const featuredProducts = activeProducts;
+  const rhinoplastySet = featuredSet;
 
   return (
     <>
@@ -49,6 +49,7 @@ const Home = () => {
                   image={rhinoplastySet.images?.[0]}
                   altFallback={rhinoplastySet.title}
                   sizes="(max-width: 900px) 100vw, 48vw"
+                  priority
                 />
               </Link>
               <div className="featured-set-content">

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import PageBanner from '../components/PageBanner';
-import products from '../data/products.json';
+import products from '../data/activeProducts';
 import { getProductPath } from '../utils/productUrls';
 import ProductImage from '../components/ProductImage';
 
@@ -31,27 +31,7 @@ const collectionLabels = {
   'Ultra Fine Micro Instruments': 'Microinstrumental Ultrafino'
 };
 
-const collections = [
-  'Facelift Scissors',
-  'Dissecting Scissors',
-  'Scissors',
-  'Tenotomy Scissors',
-  'Needle Holders',
-  'Dissecting Forceps',
-  'Retractors & Skin Hooks',
-  'Self Retaining Retractors',
-  'Rhinoplasty Sets',
-  'Dissectors',
-  'Scalpel Handles',
-  'FaceLift Forceps',
-  'Areola Markers',
-  'Breast Retractors',
-  'Nasal Instruments',
-  'Browlift Instruments',
-  'Maxillofacial Instruments',
-  'Micro Surgery Instruments',
-  'Ultra Fine Micro Instruments'
-];
+const collections = ['Rhinoplasty Sets'];
 
 const getProductPriceRange = (product) => {
   const prices = [
@@ -179,10 +159,10 @@ const Catalog = () => {
           <div className="catalog-content">
             {filteredProducts.length > 0 ? (
               <div className="product-grid">
-                {filteredProducts.map((product) => (
+                {filteredProducts.map((product, index) => (
                 <div className="product-card" key={product.id}>
                   <Link href={getProductPath(product)} className="product-image">
-                    <ProductImage image={product.images?.[0]} altFallback={product.title} />
+                    <ProductImage image={product.images?.[0]} altFallback={product.title} priority={index === 0} />
                   </Link>
                   <div className="product-info">
                     <div className="product-code">Artículo {product.article}</div>

@@ -1,4 +1,4 @@
-import products from '@/data/products.json';
+import products from '@/data/activeProducts';
 import { getProductPath } from '@/utils/productUrls';
 
 const siteUrl = 'https://coinsurgical.shop';

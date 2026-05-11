@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { CartContext } from '../context/CartContext';
-import products from '../data/products.json';
+import products from '../data/activeProducts';
 import { getProductPath } from '../utils/productUrls';
 import ProductImage from './ProductImage';
 

@@ -4,7 +4,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import PageBanner from '../components/PageBanner';
 import { CartContext } from '../context/CartContext';
-import products from '../data/products.json';
+import products from '../data/activeProducts';
 import { getProductPath } from '../utils/productUrls';
 import ProductImage, { getImageAlt, getImageSrc } from '../components/ProductImage';
 
@@ -59,6 +59,7 @@ const Product = ({ product }) => {
   const selectedTitle = selectedVariantData?.title || selectedVariantData?.name || product.title;
   const selectedArticle = selectedSizeData?.code || selectedSizeData?.article || selectedVariantData?.code || product.article;
   const selectedPrice = selectedVariantData?.price ?? product.price;
+  const relatedProducts = products.filter((item) => item.id !== product.id).slice(0, 2);
 
   const handleZoomMove = (event) => {
     if (!isZoomActive) return;
@@ -261,11 +262,13 @@ const Product = ({ product }) => {
           </div>
         </div>
 
+        {!!relatedProducts.length && (
+          <>
         <div className="section-header" style={{ margin: '2rem' }}>
           <h2>Instrumentos Relacionados</h2>
         </div>
         <div className="product-grid">
-          {products.filter((item) => item.id !== product.id).slice(0, 2).map((item) => (
+          {relatedProducts.map((item) => (
             <div className="product-card" key={item.id}>
               <Link href={getProductPath(item)} className="product-image">
                 <ProductImage image={item.images?.[0]} altFallback={item.title} />
@@ -278,6 +281,8 @@ const Product = ({ product }) => {
             </div>
           ))}
         </div>
+          </>
+        )}
       </div>
 
     </>

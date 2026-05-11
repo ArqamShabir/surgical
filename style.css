@@ -677,6 +677,7 @@ img {
 .product-image .image-shell img {
   width: 100%;
   transition: transform var(--transition-normal);
+  background-color: #fff;
 }
 
 .product-card:hover .product-image .image-shell img {

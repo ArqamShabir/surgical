@@ -42,8 +42,9 @@ const ProductImage = ({
           fill
           sizes={sizes}
           priority={priority}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
           quality={68}
-          {...(priority ? {} : { loading: 'lazy' })}
           className={imageClassName}
           onLoad={() => setLoaded(true)}
           onError={() => setFailed(true)}

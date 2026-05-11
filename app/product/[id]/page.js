@@ -1,12 +1,19 @@
 import { notFound, redirect } from 'next/navigation';
 import Product from '@/views/Product';
-import products from '@/data/products.json';
+import products from '@/data/activeProducts';
+import legacyProducts from '@/data/products.json';
 import { findProductByParam, getProductPath, getProductSlug } from '@/utils/productUrls';
 
 export function generateStaticParams() {
-  return products.map((product) => ({
-    id: getProductSlug(product),
-  }));
+  const params = new Map();
+
+  [...products, ...legacyProducts].forEach((product) => {
+    params.set(getProductSlug(product), {
+      id: getProductSlug(product),
+    });
+  });
+
+  return Array.from(params.values());
 }
 
 export async function generateMetadata({ params }) {
